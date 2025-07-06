@@ -1,0 +1,217 @@
+/*=============== FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@font-face {
+  font-family: "TTTravels";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/TTTravels/TTTravels-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "TTTravels";
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/TTTravels/TTTravels-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "TTTravels";
+  font-style: italic;
+  font-weight: 600;
+  src: url("fonts/TTTravels/TTTravels-BoldItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "TTTravels";
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/TTTravels/TTTravels-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "TTTravels";
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/TTTravels/TTTravels-Medium.woff2") format("woff2");
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: #902c4f;
+  --second-color: #0a99b2;
+  --text-color: hsl(0, 0%, 0%);
+  --text-color-light: hsl(0, 0%, 100%);
+  --body-color: #fff;
+  --body-color-dark: #181517;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "TTTravels", "Open Sans", sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 70px;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --h4-font-size: 28px;
+  --normal-font-size: 24px;
+  --small-font-size: 20px;
+  --smaller-font-size: 0.75rem;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  margin: 0;
+}
+
+button {
+  border: none;
+  background-color: var(--first-color);
+  color: var(--text-color-light);
+  cursor: pointer;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: 600;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+  font-weight: 400;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/*=============== HEADER ===============*/
+header {
+  background-color: var(--body-color-dark);
+  padding-top: 20px;
+}
+
+.container {
+  margin: 0 60px;
+}
+
+.header__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+}
+
+.header__logo {
+  width: 192px;
+}
+
+.header__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__button-feed {
+  padding: 15px 24px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+/*=============== FIRST SCREEN ===============*/
+.first {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 222px;
+  background-color: var(--body-color-dark);
+  color: var(--text-color-light);
+  overflow: hidden;
+}
+
+.first h1 {
+  text-transform: uppercase;
+  line-height: 110%;
+}
+
+.first h1 span {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.first h4 {
+  margin-top: 48px;
+}
+
+.first-box {
+  position: relative;
+  margin-left: 60px;
+  z-index: 10;
+}
+
+.main__button-feed {
+  margin-top: 52px;
+  padding: 28px 36px;
+  border-radius: 12px;
+  font-size: var(--normal-font-size);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/*=============== VIDEO MAIN ===============*/
+.logo_mask {
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  left: -200px;
+
+  -webkit-mask-image: url("files/videoMask.svg");
+  mask-image: url("files/videoMask.svg");
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+}
+
+.video_holder {
+  width: 130vw;
+  /* height: 100%; */
+  overflow: hidden;
+}
+
+.video_holder video {
+  z-index: -1;
+  pointer-events: none;
+}
+
+.video_holder video {
+  position: relative;
+  top: -80px;
+  right: 250px;
+}
+
+/*=============== MEDIA SCREEN ===============*/
+
+@media screen and (min-width: 1280px) {
+  :root {
+    --h1-font-size: 52px;
+    --h4-font-size: 24px;
+    --normal-font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  :root {
+    --h1-font-size: 70px;
+    --h4-font-size: 28px;
+    --normal-font-size: 24px;
+  }
+}

@@ -1,34 +1,40 @@
 /*=============== FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/TTTravels/TTTravels-Regular.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Regular.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: italic;
   font-weight: 400;
-  src: url("fonts/TTTravels/TTTravels-Italic.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Italic.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: italic;
   font-weight: 600;
-  src: url("fonts/TTTravels/TTTravels-BoldItalic.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-BoldItalic.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 600;
-  src: url("fonts/TTTravels/TTTravels-Bold.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Bold.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 500;
-  src: url("fonts/TTTravels/TTTravels-Medium.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'TTTravels';
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/TTTravels/TTTravels-ExtraBold.woff2') format('woff2');
 }
 
 /*=============== VARIABLES CSS ===============*/
@@ -44,12 +50,13 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "TTTravels", "Open Sans", sans-serif;
+  --body-font: 'TTTravels', 'Open Sans', sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 70px;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
+  --h2-font-size: 52px;
+  --h3-font-size: 58px;
   --h4-font-size: 28px;
+  --p-font-size: 24px;
   --normal-font-size: 24px;
   --small-font-size: 20px;
   --smaller-font-size: 0.75rem;
@@ -67,6 +74,7 @@ button {
   background-color: var(--first-color);
   color: var(--text-color-light);
   cursor: pointer;
+  font-family: var(--body-font);
 }
 
 h1 {
@@ -75,12 +83,36 @@ h1 {
   margin-block-start: 0;
   margin-block-end: 0;
 }
-
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: 600;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: var(--h3-font-size);
+  font-weight: 600;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-transform: uppercase;
+}
 h4 {
   font-size: var(--h4-font-size);
   font-weight: 400;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+p {
+  font-size: var(--p-font-size);
+  font-weight: 400;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.section {
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 /*=============== HEADER ===============*/
@@ -125,11 +157,16 @@ a {
 /*=============== FIRST SCREEN ===============*/
 .first {
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 222px;
+  padding-top: 110px;
   background-color: var(--body-color-dark);
   color: var(--text-color-light);
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.first-box {
+  position: relative;
+  margin-left: 60px;
+  z-index: 10;
 }
 
 .first h1 {
@@ -146,12 +183,6 @@ a {
   margin-top: 48px;
 }
 
-.first-box {
-  position: relative;
-  margin-left: 60px;
-  z-index: 10;
-}
-
 .main__button-feed {
   margin-top: 52px;
   padding: 28px 36px;
@@ -164,12 +195,11 @@ a {
 /*=============== VIDEO MAIN ===============*/
 .logo_mask {
   display: inline-block;
-  position: absolute;
-  top: -20px;
-  left: -200px;
+  margin-top: -60vh;
+  margin-left: -12vw;
 
-  -webkit-mask-image: url("files/videoMask.svg");
-  mask-image: url("files/videoMask.svg");
+  -webkit-mask-image: url('files/videoMask.svg');
+  mask-image: url('files/videoMask.svg');
 
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
@@ -181,14 +211,14 @@ a {
   mask-size: 100%;
 }
 
-.video_holder {
+/* .video_holder {
   width: 130vw;
-  /* height: 100%; */
-  overflow: hidden;
-}
+  height: 100%;
+   overflow: hidden;
+} */
 
 .video_holder video {
-  z-index: -1;
+  z-index: 5;
   pointer-events: none;
 }
 
@@ -196,10 +226,182 @@ a {
   position: relative;
   top: -80px;
   right: 250px;
+  width: 130vw;
+}
+
+/*=============== COMPANY ===============*/
+.company {
+  /* height: 100vh; */
+  background-image: url('/assets/files/o-kompany-fon.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -20%;
+}
+
+.company_content {
+  position: relative;
+  padding-top: 86px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 6;
+}
+
+.company_info {
+  margin: 266px 0 142px 0;
+  width: 610px;
+  display: flex;
+  flex-direction: column;
+}
+
+.company_title {
+  margin-bottom: 32px;
+}
+.company_text-1 {
+  margin-bottom: 40px;
+}
+.company_text-2 {
+  margin-bottom: 34px;
+}
+
+.company_logo {
+  width: 274px;
+  margin: auto;
+}
+
+/*=============== ABOUT ===============*/
+.about {
+  padding: 160px 0;
+  display: flex;
+}
+
+.about_column {
+  width: 50%;
+}
+
+.about_column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 122px;
+}
+
+.about_card {
+  display: flex;
+  flex-direction: column;
+}
+.about_number {
+  font-size: 200px;
+  color: var(--second-color);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+.about_number span {
+  font-size: 80px;
+}
+.about_description {
+  font-size: 28px;
+  color: var(--second-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+.about_text {
+  font-size: 24px;
+  text-align: center;
+}
+
+.about_card-big {
+  display: flex;
+  flex-direction: column;
+}
+.about_number-big {
+  font-size: 350px;
+  color: var(--first-color);
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -25px;
+  line-height: 1;
+}
+.about_text-big {
+  font-size: 54px;
+  color: var(--first-color);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about_column-box {
+  margin-top: 86px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 547px;
+  display: flex;
+  justify-content: space-between;
+}
+.about_column-card {
+  display: flex;
+}
+
+/*=============== MEDIA SCREEN ===============*/
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --h1-font-size: 42px;
+    --h4-font-size: 22px;
+    --normal-font-size: 18px;
+  }
+
+  .logo_mask {
+    margin-top: -50vh;
+    margin-left: -12vw;
+  }
+}
+
+.video_holder video {
+  width: 135vw;
+}
+
+@media screen and (min-width: 1280px) {
+  :root {
+    --h1-font-size: 52px;
+    --h4-font-size: 24px;
+    --normal-font-size: 20px;
+  }
+
+  .logo_mask {
+    margin-top: -55vh;
+    margin-left: -15vw;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .first {
+    padding-top: 150px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  :root {
+    --h1-font-size: 70px;
+    --h4-font-size: 28px;
+    --normal-font-size: 24px;
+  }
+
+  .logo_mask {
+    margin-top: -68vh;
+    margin-left: -5vw;
+  }
+
+  .video_holder video {
+    position: relative;
+    width: 120vw;
+  }
 }
 
 /*=============== MAP ===============*/
-.map-container {
+/* .map-container {
   width: 100%;
   margin: 0 auto;
 }
@@ -209,15 +411,15 @@ svg {
   height: auto;
 }
 
-/* .regions path {
+.regions path {
   fill: #ccc;
   stroke: #666;
   stroke-width: 1;
   transition: fill 0.3s;
-} */
+}
 
 .regions path:hover {
-  /* fill: #4caf50; */
+  fill: #4caf50;
   cursor: pointer;
 }
 
@@ -231,22 +433,4 @@ svg {
   padding: 10px;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/*=============== MEDIA SCREEN ===============*/
-
-@media screen and (min-width: 1280px) {
-  :root {
-    --h1-font-size: 52px;
-    --h4-font-size: 24px;
-    --normal-font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  :root {
-    --h1-font-size: 70px;
-    --h4-font-size: 28px;
-    --normal-font-size: 24px;
-  }
-}
+} */

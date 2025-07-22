@@ -1,40 +1,40 @@
 /*=============== FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/TTTravels/TTTravels-Regular.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Regular.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: italic;
   font-weight: 400;
-  src: url("fonts/TTTravels/TTTravels-Italic.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Italic.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: italic;
   font-weight: 600;
-  src: url("fonts/TTTravels/TTTravels-BoldItalic.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-BoldItalic.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 600;
-  src: url("fonts/TTTravels/TTTravels-Bold.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Bold.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 500;
-  src: url("fonts/TTTravels/TTTravels-Medium.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Medium.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 800;
-  src: url("fonts/TTTravels/TTTravels-ExtraBold.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-ExtraBold.woff2') format('woff2');
 }
 
 /*=============== VARIABLES CSS ===============*/
@@ -42,6 +42,7 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: #902c4f;
+  --first-color-hover: #951441;
   --second-color: #0a99b2;
   --text-color: hsl(0, 0%, 0%);
   --text-color-light: hsl(0, 0%, 100%);
@@ -50,16 +51,17 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "TTTravels", "Open Sans", sans-serif;
+  --body-font: 'TTTravels', 'Open Sans', sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 3.5vw;
-  --h2-font-size: 3vw;
-  --h3-font-size: 3.2vw;
+  --h2-font-size: 2.9vw;
+  --h3-font-size: 3.1vw;
   --h4-font-size: 1.8vw;
-  --p-font-size: 1.5vw;
-  --normal-font-size: 1.6vw;
+  --h5-font-size: 1.6vw;
+  --p-font-size: 1.4vw;
+  --normal-font-size: 1.5vw;
   --small-font-size: 1.4vw;
-  --smaller-font-size: 0.75rem;
+  --smaller-font-size: 1.3vw;
 }
 
 body {
@@ -75,6 +77,10 @@ button {
   color: var(--text-color-light);
   cursor: pointer;
   font-family: var(--body-font);
+  transition: background-color 0.2s ease-in-out;
+}
+button:hover {
+  background-color: var(--first-color-hover);
 }
 
 h1 {
@@ -104,8 +110,10 @@ h4 {
   margin-block-end: 0;
 }
 h5 {
+  font-size: var(--h5-font-size);
   margin-block-start: 0;
   margin-block-end: 0;
+  text-transform: uppercase;
 }
 p {
   font-size: var(--p-font-size);
@@ -114,9 +122,33 @@ p {
   margin-block-end: 0;
 }
 
+input,
+textarea {
+  padding: 1.7vw 0.5vw;
+  background-color: inherit;
+  font-size: var(--smaller-font-size);
+  font-family: var(--body-font);
+  color: var(--text-color-light);
+  border: none;
+  border-bottom: 2px solid;
+  border-color: var(--body-color);
+  outline: none;
+  box-sizing: border-box;
+}
+input::placeholder {
+  color: var(--text-color-light);
+  font-family: var(--body-font);
+}
+input[type='checkbox' i] {
+  width: 45px;
+  accent-color: var(--first-color);
+  border: none;
+}
+
 .section {
   margin-left: 60px;
   margin-right: 60px;
+  padding-top: 8vw;
 }
 
 .color-first {
@@ -132,9 +164,9 @@ header {
   background-color: var(--body-color-dark);
   padding-top: 20px;
 }
-
-.container {
-  margin: 0 60px;
+.header__section {
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .header__box {
@@ -199,7 +231,7 @@ a {
   margin-top: 5.5vh;
   padding: 28px 36px;
   border-radius: 12px;
-  font-size: var(--normal-font-size);
+  font-size: var(--small-font-size);
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -210,8 +242,8 @@ a {
   margin-top: -65vh;
   margin-left: -12vw;
 
-  -webkit-mask-image: url("files/videoMask.svg");
-  mask-image: url("files/videoMask.svg");
+  -webkit-mask-image: url('files/videoMask.svg');
+  mask-image: url('files/videoMask.svg');
 
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
@@ -234,16 +266,21 @@ a {
   pointer-events: none;
 }
 
+.logo_mask {
+  margin-top: -65vh;
+  margin-left: -1vw;
+}
+
 .video_holder video {
   position: relative;
-  top: -80px;
-  right: 250px;
-  width: 130vw;
+  /* top: -80px;
+  right: 250px; */
+  width: 115vw;
 }
 
 /*=============== COMPANY ===============*/
 .company {
-  background-image: url("/assets/files/o-kompany-fon.jpg");
+  background-image: url('/assets/files/o-kompany-fon.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -260,19 +297,19 @@ a {
 
 .company_info {
   margin: 16vh 0 12vh 0;
-  width: 37vw;
+  width: 35vw;
   display: flex;
   flex-direction: column;
 }
 
 .company_title {
-  margin-bottom: 32px;
+  margin-bottom: 4vh;
 }
 .company_text-1 {
-  margin-bottom: 40px;
+  margin-bottom: 4vh;
 }
 .company_text-2 {
-  margin-bottom: 34px;
+  margin-bottom: 6vh;
 }
 
 .company_logo {
@@ -282,7 +319,6 @@ a {
 
 /*=============== ABOUT ===============*/
 .about {
-  padding: 8vw 0;
   display: flex;
 }
 
@@ -375,51 +411,51 @@ a {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 32px;
+  gap: 2.1vw;
 }
 
 .yslugi_1 {
   grid-column: span 3 / span 3;
-  background: url("/assets/files/yslugi-1.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-1.jpg') no-repeat center;
 }
 .yslugi_2 {
   grid-column: span 3 / span 3;
   grid-column-start: 4;
-  background: url("/assets/files/yslugi-2.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-2.jpg') no-repeat center;
 }
 .yslugi_3 {
   grid-column: span 2 / span 2;
   grid-row-start: 2;
-  background: url("/assets/files/yslugi-3.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-3.jpg') no-repeat center;
 }
 .yslugi_4 {
   grid-column: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 2;
-  background: url("/assets/files/yslugi-4.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-4.jpg') no-repeat center;
 }
 .yslugi_5 {
   grid-column: span 2 / span 2;
   grid-column-start: 5;
   grid-row-start: 2;
-  background: url("/assets/files/yslugi-5.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-5.jpg') no-repeat center;
 }
 .yslugi_6 {
   grid-column: span 2 / span 2;
   grid-row-start: 3;
-  background: url("/assets/files/yslugi-6.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-6.jpg') no-repeat center;
 }
 .yslugi_7 {
   grid-column: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 3;
-  background: url("/assets/files/yslugi-7.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-7.jpg') no-repeat center;
 }
 .yslugi_8 {
   grid-column: span 2 / span 2;
   grid-column-start: 5;
   grid-row-start: 3;
-  background: url("/assets/files/yslugi-8.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-8.jpg') no-repeat center;
 }
 
 .yslugi_card {
@@ -450,14 +486,13 @@ a {
 
 .yslugi_card-content h5 {
   margin-bottom: 10px;
-  font-size: 1.8vw;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--text-color-light);
 }
 
 .yslugi_card-content p {
-  font-size: 1.8vw;
+  font-size: var(--h5-font-size);
   color: var(--text-color-light);
 }
 
@@ -476,223 +511,192 @@ a {
   margin-left: 41vw;
 }
 
-/*=============== MEDIA SCREEN ===============*/
+/*=============== ФОРМА ОБРАТНОЙ СВЯЗИ ===============*/
+.feedback {
+}
+.feedback_content {
+  padding: 4vw 2.7vw;
+  background-image: url('/assets/files/feed-back-fon.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  border-radius: 12px;
+  color: var(--text-color-light);
+}
+.feedback_content h3 {
+  font-size: 2.2vw;
+  margin-bottom: 4vh;
+}
+.feedback_content p {
+  margin-bottom: 12vh;
+  width: 55vw;
+  font-size: var(--smaller-font-size);
+}
 
+.feedback_form {
+  width: 55vw;
+}
+.feedback_form-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+}
+.feedback_input {
+  width: 100%;
+  height: 5vh;
+  font-size: var(--smaller-font-size);
+}
+.feedback_textarea {
+  margin-top: 8vh;
+  width: 100%;
+  height: 5vh;
+  font-size: var(--p-font-size);
+}
+.feedback_form-content-last {
+  margin-top: 14vh;
+}
+.feedback_button {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  width: 100%;
+  border-radius: 12px;
+  font-size: var(--small-font-size);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.feedback_form-checkbox {
+  width: 100%;
+  display: flex;
+  gap: 11px;
+}
+.feedback_form-label {
+  font-size: 1vw;
+}
+.feedback_document {
+  font-size: 1vw;
+  text-decoration: underline;
+}
+
+/*=============== НАШИ ПРЕИМУЩЕСТВА ===============*/
+.advantage {
+}
+
+.advantage_all-cards {
+  margin-top: 2vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.1vw;
+}
+
+.advantage_card {
+  border-radius: 12px;
+  color: var(--text-color-light);
+  height: 35vh;
+  margin-top: 4.2vw;
+}
+.advantage_card img {
+  width: 8vw;
+}
+.advantage_card h5 {
+  font-weight: 600;
+}
+
+/*=============== ИНТЕРАКТИВНЫЕ КАРТОЧКИ  ===============*/
+.flipper {
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgba(59, 169, 189, 0) 0%, #3ba9bd 100%),
+    #262626;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/*=============== MEDIA SCREEN ===============*/
 @media screen and (min-width: 1024px) {
-  /* :root {
-    --normal-font-size: 18px;
-    --h1-font-size: 42px;
-    --h2-font-size: 32px;
-    --h3-font-size: 40px;
-    --h4-font-size: 22px;
-    --p-font-size: 18px;
-    --normal-font-size: 24px;
-    --small-font-size: 20px;
-    --smaller-font-size: 0.75rem;
-  } */
+  .section {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .header__button-feed {
+    padding: 12px 18px;
+  }
+
+  .main__button-feed {
+    padding: 22px 30px;
+  }
+
+  .first {
+    padding-top: 12vh;
+  }
+  .first-box {
+    margin-left: 40px;
+  }
 
   .logo_mask {
-    margin-top: -50vh;
-    margin-left: -12vw;
+    margin-top: -70vh;
   }
-
-  .video_holder video {
-    width: 135vw;
-  }
-
-  /* .company_info {
-    margin: 100px 0 60px 0;
-    width: 450px;
-  }
-  .company_logo {
-    width: 220px;
-  } */
-
-  /* .about_number {
-    font-size: 125px;
-  }
-  .about_description {
-    font-size: 20px;
-  }
-  .about_text {
-    font-size: 18px;
-  }
-  .about_number-big {
-    font-size: 260px;
-  }
-  .about_text-big {
-    font-size: 44px;
-  } 
-  .about_column-box {
-    width: 420px;
-  }
-  .about_column-box-icon {
-    width: 66px;
-  }*/
 }
 
 @media screen and (min-width: 1280px) {
-  /* :root {
-    --normal-font-size: 18px;
-    --h1-font-size: 44px;
-    --h2-font-size: 36px;
-    --h3-font-size: 42px;
-    --h4-font-size: 24px;
-    --p-font-size: 20px;
-    --normal-font-size: 24px;
-    --small-font-size: 20px;
-    --smaller-font-size: 0.75rem;
-  } */
+  .first {
+    padding-top: 13vh;
+  }
 
   .logo_mask {
-    margin-top: -65vh;
-    margin-left: -15vw;
+    margin-top: -69vh;
   }
 
-  /* .company_info {
-    margin: 100px 0 60px 0;
-    width: 480px;
-  } */
-
-  /* .about_number {
-    font-size: 155px;
+  .section {
+    margin-left: 60px;
+    margin-right: 60px;
   }
-  .about_description {
-    font-size: 22px;
-  }
-  .about_text {
-    font-size: 20px;
-  }
-  .about_number-big {
-    font-size: 300px;
-  }
-  .about_text-big {
-    font-size: 48px;
-  } 
-  .about_column-box {
-    width: 450px;
-  }*/
 }
 
 @media screen and (min-width: 1450px) {
-  /* :root {
-    --normal-font-size: 20px;
-    --h1-font-size: 52px;
-    --h2-font-size: 44px;
-    --h3-font-size: 48px;
-    --h4-font-size: 24px;
-    --p-font-size: 22px;
-    --normal-font-size: 24px;
-    --small-font-size: 20px;
-    --smaller-font-size: 0.75rem;
-  } */
-
-  /* .first {
-    padding-top: 130px;
-  } */
-
-  /* .company_info {
-    margin: 120px 0 80px 0;
-    width: 520px;
+  .first {
+    padding-top: 15vh;
   }
-  .company_logo {
-    width: 240px;
-  } */
-
-  /*.about {
-    padding: 140px 0;
-  }
-   .about_number {
-    font-size: 170px;
-  }
-  .about_description {
-    font-size: 24px;
-  }
-  .about_text {
-    font-size: 22px;
-  }
-  .about_number-big {
-    font-size: 320px;
-  }
-  .about_text-big {
-    font-size: 50px;
-  }
-  .about_column-box {
-    width: 480px;
-  } */
-
-  /* .yslugi_card-content {
-    padding: 44px;
-  }
-  .yslugi_card-content h5 {
-    font-size: 24px;
-  }
-  .yslugi_card-content p {
-    font-size: 24px;
-  } */
 }
 
 @media screen and (min-width: 1600px) {
-  /* :root {
-    --h1-font-size: 70px;
-    --h2-font-size: 52px;
-    --h3-font-size: 58px;
-    --h4-font-size: 28px;
-    --p-font-size: 24px;
-    --normal-font-size: 24px;
-  } */
-
-  /* .first {
-    padding-top: 150px;
-  } */
+  .first {
+    padding-top: 17vh;
+  }
 
   .logo_mask {
-    margin-top: -68vh;
-    margin-left: -5vw;
+    margin-top: -65vh;
+    margin-left: -1vw;
   }
 
   .video_holder video {
-    width: 120vw;
+    width: 115vw;
   }
-
-  /* .company_info {
-    margin: 266px 0 142px 0;
-    width: 610px;
-  }
-  .company_logo {
-    width: 274px;
-  }
-
-  .about {
-    padding: 160px 0;
-  } */
-  /* .about_number {
-    font-size: 200px;
-  }
-  .about_description {
-    font-size: 28px;
-  }
-  .about_text {
-    font-size: 24px;
-  }
-  .about_number-big {
-    font-size: 350px;
-  }
-  .about_text-big {
-    font-size: 54px;
-  } */
-  /* .about_column-box {
-    margin-top: 86px;
-    width: 547px;
-  } */
-
-  /* .yslugi_card-content {
-    padding: 52px;
-  }
-  .yslugi_card-content h5 {
-    font-size: 32px;
-  }
-  .yslugi_card-content p {
-    font-size: 32px;
-  } */
 }

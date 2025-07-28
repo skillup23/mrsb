@@ -405,6 +405,34 @@ a {
   width: 4.2vw;
 }
 
+/*=============== РЕГИОНЫ ===============*/
+
+.regions_button {
+  display: flex;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.regions_button img {
+  width: 2.5vw;
+  animation: moveArrow 1s linear infinite;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /*=============== YSLUGI ===============*/
 
 .yslugi_parent {
@@ -626,54 +654,37 @@ a {
   padding: 2vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
-  background: linear-gradient(180deg, rgba(59, 169, 189, 0) 0%, #3ba9bd 100%),
-    #262626;
 }
 
 .front {
   z-index: 2;
+  background: linear-gradient(180deg, rgba(59, 169, 189, 0) 0%, #3ba9bd 100%),
+    #262626;
+  justify-content: space-between;
 }
 
 .back {
   transform: rotateY(180deg);
+  background-color: #262626;
+  gap: 3vh;
+}
+
+.back p {
+  font-size: 1.2vw;
 }
 
 /*=============== НАШИ ПАРТНЕРЫ ===============*/
 .partners_container {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.logos-container {
-  position: relative;
+  margin-top: 8vh;
   width: 100%;
-  height: 17vw;
-  overflow: hidden;
-  margin: 4vw 0 0 0;
-  touch-action: pan-y;
-}
-
-.logos-track {
-  display: flex;
-  position: absolute;
-  height: 100%;
-  align-items: center;
-  will-change: transform;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2vw;
 }
 
 .partners_logo {
-  flex-shrink: 0;
-  width: 17vw;
-  aspect-ratio: 1 / 1;
-  margin: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: 8px;
-  user-select: none;
+  width: 100%;
 }
 
 /*=============== ИНФОРМАЦИЯ ===============*/

@@ -63,3 +63,98 @@
 //   // Запускаем импорт
 //   importSVG();
 // });
+
+// ++++++++++++++++++++ Карусель партнеры ++++++++++++++++++++++
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const logosContainer = document.getElementById('logosContainer');
+//   const logosTrack = document.getElementById('logosTrack');
+//   const logos = Array.from(document.querySelectorAll('.partners_logo'));
+
+//   const logoWidth = logos[0].offsetWidth + 32; // ширина логотипа + margin
+//   const visibleLogos = 5;
+//   let speed = 2;
+
+//   // Клонируем логотипы для бесконечной анимации
+//   function cloneLogos() {
+//     // Клонируем все логотипы для плавного перехода
+//     const clones = logos.map((logo) => logo.cloneNode(true));
+//     clones.forEach((clone) => logosTrack.appendChild(clone));
+//   }
+
+//   cloneLogos();
+
+//   let animationId;
+//   let position = 0;
+//   let isDragging = false;
+//   let startX;
+//   let startPosition;
+
+//   // Автоматическая прокрутка
+//   function autoScroll() {
+//     position -= speed;
+
+//     // Если прошли половину длины - перескакиваем в начало
+//     if (position <= -logos.length * logoWidth) {
+//       position = 0;
+//     }
+
+//     updatePosition();
+//     animationId = requestAnimationFrame(autoScroll);
+//   }
+
+//   // Обновление позиции
+//   function updatePosition() {
+//     logosTrack.style.transform = `translateX(${position}px)`;
+//   }
+
+//   // Обработчики для перетаскивания
+//   logosContainer.addEventListener('mousedown', startDrag);
+//   logosContainer.addEventListener('touchstart', startDrag, { passive: false });
+
+//   function startDrag(e) {
+//     isDragging = true;
+//     cancelAnimationFrame(animationId);
+
+//     startX = e.clientX || e.touches[0].clientX;
+//     startPosition = position;
+
+//     logosContainer.style.cursor = 'grabbing';
+
+//     document.addEventListener('mousemove', drag);
+//     document.addEventListener('touchmove', drag, { passive: false });
+//     document.addEventListener('mouseup', endDrag);
+//     document.addEventListener('touchend', endDrag);
+
+//     e.preventDefault();
+//   }
+
+//   function drag(e) {
+//     if (!isDragging) return;
+
+//     const x = e.clientX || e.touches[0].clientX;
+//     const diff = x - startX;
+//     position = startPosition + diff;
+
+//     updatePosition();
+
+//     e.preventDefault();
+//   }
+
+//   function endDrag() {
+//     isDragging = false;
+//     logosContainer.style.cursor = 'grab';
+
+//     document.removeEventListener('mousemove', drag);
+//     document.removeEventListener('touchmove', drag);
+//     document.removeEventListener('mouseup', endDrag);
+//     document.removeEventListener('touchend', endDrag);
+
+//     // Продолжаем анимацию после перетаскивания
+//     autoScroll();
+//   }
+
+//   // Инициализация
+//   updatePosition();
+//   autoScroll(); // Запускаем автоматическую прокрутку
+// });

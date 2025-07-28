@@ -32,3 +32,39 @@ svg {
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 } */
+
+/*=============== НАШИ ПАРТНЕРЫ ===============*/
+/* .partners_container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.logos-container {
+  position: relative;
+  width: 100%;
+  height: 17vw;
+  overflow: hidden;
+  margin: 4vw 0 0 0;
+  touch-action: pan-y;
+}
+
+.logos-track {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  align-items: center;
+  will-change: transform;
+}
+
+.partners_logo {
+  flex-shrink: 0;
+  width: 17vw;
+  aspect-ratio: 1 / 1;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 8px;
+  user-select: none;
+} */

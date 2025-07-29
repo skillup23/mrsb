@@ -175,6 +175,18 @@ input[type='checkbox' i] {
   color: var(--second-color);
 }
 
+.hidden-block {
+  max-height: 0px;
+}
+
+.visible-block {
+  max-height: 50vw;
+}
+
+.rotate180 {
+  rotate: 180deg;
+}
+
 /*=============== HEADER ===============*/
 header {
   background-color: var(--body-color-dark);
@@ -206,6 +218,17 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__nav a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.1s ease-in-out;
+}
+
+.header__nav a:hover {
+  color: var(--text-color-hover);
 }
 
 .header__button-feed {
@@ -406,7 +429,6 @@ a {
 }
 
 /*=============== РЕГИОНЫ ===============*/
-
 .regions_button {
   display: flex;
   cursor: pointer;
@@ -415,10 +437,35 @@ a {
   align-items: center;
   gap: 0.5vw;
 }
-
 .regions_button img {
   width: 2.5vw;
   animation: moveArrow 1s linear infinite;
+}
+
+.regions {
+  margin-top: 8vh;
+  background-color: var(--second-color);
+  color: var(--text-color-light);
+  transition: max-height 0.4s ease-in-out;
+}
+.regions_content {
+  display: flex;
+  justify-content: space-between;
+  padding: 5vh 0;
+}
+.regions_content h6 {
+  text-transform: uppercase;
+  font-size: 1.2vw;
+  margin-bottom: 1.5vh;
+}
+.regions_two-colomn {
+  display: flex;
+  gap: 4vw;
+}
+
+.regions_list li {
+  font-size: 1.2vw;
+  margin-top: 0.3vw;
 }
 
 @keyframes moveArrow {
@@ -810,6 +857,7 @@ a {
   display: flex;
   gap: 5px;
   align-items: center;
+  transition: color 0.1s ease-in-out;
 }
 .footer_column a:hover {
   color: var(--text-color-hover);

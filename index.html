@@ -19,18 +19,57 @@
     <header>
       <div class="header__section">
         <nav class="header__nav">
-          <img src="assets/files/logo_1.png" alt="logo" class="header__logo" />
-          <a href="#">О компании</a>
-          <a href="#"
-            >Услуги
-            <img src="/assets/files/arrow-down-white.png" alt="Стрелка вниз"
+          <a href="/"
+            ><img src="assets/files/logo_1.png" alt="logo" class="header__logo"
           /></a>
-          <a href="#"
-            >Информация
-            <img src="/assets/files/arrow-down-white.png" alt="Стрелка вниз"
-          /></a>
-          <a href="#">Партнеры</a>
-          <a href="#">Контакты</a>
+
+          <a href="#" class="header__nav-link">О компании</a>
+
+          <div class="header__drop-link box-menu-1">
+            <div class="header__nav-link">
+              Услуги
+              <img
+                src="/assets/files/arrow-down-white.png"
+                alt="Стрелка вниз"
+                class="header__nav-arroy1"
+              />
+            </div>
+            <div class="header__drop-menu header__drop-menu-1 hidden-block">
+              <div class="header__drop-wrap">
+                <a href="#">Энергоснабжение</a>
+                <a href="#">ОРЭМ</a>
+                <a href="#">АИИС КУЕ</a>
+                <a href="#">Покупка генерации</a>
+                <a href="#">Консалдинг</a>
+                <a href="#">Технологическое присоединение</a>
+                <a href="#">Проектирование и строительство</a>
+                <a href="#">Зеленая энергия</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header__drop-link box-menu-2">
+            <div class="header__nav-link">
+              Информация
+              <img
+                src="/assets/files/arrow-down-white.png"
+                alt="Стрелка вниз"
+                class="header__nav-arroy2"
+              />
+            </div>
+            <div class="header__drop-menu header__drop-menu-2 hidden-block">
+              <div class="header__drop-wrap">
+                <a href="#">Отчетность</a>
+                <a href="#">Условия договора</a>
+                <a href="#">Нормативно-правовая база</a>
+                <a href="#">Реквизиты</a>
+                <a href="#">Сертификаты</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="header__nav-link">Партнеры</a>
+          <a href="#" class="header__nav-link">Контакты</a>
           <button class="header__button-feed">Оставить заявку</button>
         </nav>
       </div>
@@ -59,9 +98,9 @@
               muted
               autoplay
               pip="false"
-              poster="assets/files/videoMask.svg"
+              poster="assets/files/videoMask.jpg"
             >
-              <source src="assets/files/mainVideo1.mp4" type="video/mp4" />
+              <source src="assets/files/mainVideo2.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
@@ -99,23 +138,35 @@
         <div class="about section">
           <div class="about_column about_column-grid">
             <div class="about_card">
-              <p class="about_number">4<span>,</span>4</p>
+              <p
+                class="about_number"
+                data-target-number1="4.4"
+                data-decimals="1"
+              >
+                0
+              </p>
               <p class="about_description">Млдр.кВт/ч в год</p>
               <p class="about_text">объем реализуемой электроэнергии</p>
             </div>
             <div class="about_card">
-              <p class="about_number">8<span>,</span>2</p>
+              <p
+                class="about_number"
+                data-target-number1="8.2"
+                data-decimals="1"
+              >
+                0
+              </p>
               <p class="about_description">Млрд. руб.</p>
               <p class="about_text">выручка в 2024 году</p>
             </div>
             <div class="about_card">
-              <p class="about_number">27</p>
+              <p class="about_number" data-target-number2="27">0</p>
               <p class="about_text">
                 крупных предприятий на&nbsp;энергоснабжении
               </p>
             </div>
             <div class="about_card">
-              <p class="about_number">37</p>
+              <p class="about_number" data-target-number2="37">0</p>
               <div class="regions_button">
                 <p class="about_text">
                   регионов<br />
@@ -132,7 +183,7 @@
 
           <div class="about_column">
             <div class="about_card-big">
-              <p class="about_number-big">20</p>
+              <p class="about_number-big" data-target-number2="20">0</p>
               <p class="about_text-big">лет на рынке</p>
             </div>
             <div class="about_column-box">

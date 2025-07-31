@@ -22,6 +22,24 @@ linkMenuDrop2.addEventListener('click', function () {
   navArrow2.classList.toggle('rotate180');
 });
 
+// Обработчик клика по ссылке в меню
+document.querySelectorAll('.header__drop-wrap a').forEach((link) => {
+  link.addEventListener('click', function () {
+    this.closest('.header__drop-menu').classList.remove('visible-block');
+  });
+});
+
+// Закрыть меню при клике вне его
+document.addEventListener('click', function (event) {
+  // Проверяем, был ли клик вне кнопки меню
+  if (!linkMenuDrop1.contains(event.target)) {
+    blockNav1.classList.remove('visible-block');
+  }
+  if (!linkMenuDrop2.contains(event.target)) {
+    blockNav2.classList.remove('visible-block');
+  }
+});
+
 // +++++++++++ Отправка формы обратной связи в Телеграмм +++++++++
 document
   .getElementById('feedback-form')
@@ -85,67 +103,7 @@ buttonRegion.addEventListener('click', function () {
   buttonRegionArrow.classList.toggle('rotate180');
 });
 
-// +++++++++++ Бегущие цифры +++++++++
-// Функция для анимации числа с зяпятыми
-// function animateNumber1(element, targetNumber, duration = 2000) {
-//   const startNumber = 0;
-//   const startTime = performance.now();
-
-//   function updateNumber(currentTime) {
-//     const elapsedTime = currentTime - startTime;
-//     const progress = Math.min(elapsedTime / duration, 1);
-//     const currentNumber = startNumber + (targetNumber - startNumber) * progress;
-
-//     // Форматируем число и заменяем точку на span с запятой
-//     const formattedNumber = formatNumberWithSmallComma(
-//       currentNumber.toFixed(1)
-//     );
-//     element.innerHTML = formattedNumber;
-
-//     if (progress < 1) {
-//       requestAnimationFrame(updateNumber);
-//     } else {
-//       element.innerHTML = formatNumberWithSmallComma(targetNumber.toFixed(1));
-//     }
-//   }
-
-//   // Функция для форматирования числа с маленькой запятой
-//   function formatNumberWithSmallComma(numberString) {
-//     return numberString.replace('.', '<span>,</span>');
-//   }
-
-//   requestAnimationFrame(updateNumber);
-// }
-
-// // Настройка Intersection Observer с зяпятыми
-// const observer1 = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         const numberElement = entry.target;
-//         const targetNumber = parseFloat(
-//           numberElement.getAttribute('data-target-number') || '8.4'
-//         );
-
-//         animateNumber1(numberElement, targetNumber);
-
-//         // Отключаем observer после срабатывания
-//         observer.unobserve(numberElement);
-//       }
-//     });
-//   },
-//   { threshold: 0.5 }
-// ); // Срабатывает когда 50% элемента видно
-
-// // Находим элемент с числом и начинаем наблюдать
-// const numberElement1 = document.querySelector('.run-number-element1');
-// const numberElement2 = document.querySelector('.run-number-element2');
-// if (numberElement1) {
-//   observer1.observe(numberElement1);
-// }
-// if (numberElement1) {
-//   observer1.observe(numberElement2);
-// }
+// +++++++++++++++++++++ Бегущие цифры ++++++++++++++++++++++
 
 // Анимации чисел с десятичным остатком
 document.addEventListener('DOMContentLoaded', function () {

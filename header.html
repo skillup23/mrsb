@@ -1,0 +1,125 @@
+<header>
+  <div class="header__section">
+    <nav class="header__nav">
+      <a href="/"
+        ><img src="assets/files/logo_1.png" alt="logo" class="header__logo"
+      /></a>
+
+      <a href="#" class="header__nav-link">О компании</a>
+
+      <div class="header__drop-link">
+        <div class="header__nav-link box-menu-1">
+          Услуги
+          <img
+            src="/assets/files/arrow-down-white.png"
+            alt="Стрелка вниз"
+            class="header__nav-arroy"
+          />
+        </div>
+        <div class="header__drop-menu header__drop-menu-1 hidden-block">
+          <div class="header__drop-wrap">
+            <a href="/energosnab.html">Энергоснабжение</a>
+            <a href="#">ОРЭМ</a>
+            <a href="#">АИИС КУЕ</a>
+            <a href="#">Покупка генерации</a>
+            <a href="#">Консалдинг</a>
+            <a href="#">Технологическое присоединение</a>
+            <a href="#">Проектирование и&nbsp;строительство</a>
+            <a href="#">Зеленая энергия</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__drop-link">
+        <div class="header__nav-link box-menu-2">
+          Информация
+          <img
+            src="/assets/files/arrow-down-white.png"
+            alt="Стрелка вниз"
+            class="header__nav-arroy"
+          />
+        </div>
+        <div class="header__drop-menu header__drop-menu-2 hidden-block">
+          <div class="header__drop-wrap">
+            <a href="#">Отчетность</a>
+            <a href="#">Условия договора</a>
+            <a href="#">Нормативно-правовая база</a>
+            <a href="#">Реквизиты</a>
+            <a href="#">Сертификаты</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="header__nav-link">Партнеры</a>
+      <a href="#" class="header__nav-link">Контакты</a>
+      <button class="header__button-feed">Оставить заявку</button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // +++++++++++ Раскрывающийся список в меню +++++++++
+  // Слушатель по всему документу
+  function initDropdown() {
+    const dropdowns = document.querySelectorAll('.header__drop-link');
+    const dropdownButtons = document.querySelectorAll('.header__nav-link');
+    const dropdownLinks = document.querySelectorAll('.header__drop-wrap a');
+
+    // Закрыть все выпадающие меню кроме текущего
+    function closestAllDropMenu(exceptThis) {
+      dropdowns.forEach((dropdown) => {
+        if (dropdown !== exceptThis) {
+          dropdown
+            .querySelector('.header__drop-menu')
+            .classList.remove('visible-block');
+
+          //Найти стрелку для переворота в родительском компоненте
+          const arrowParent = dropdown.closest('.header__drop-link');
+          arrowParent
+            .querySelector('.header__nav-arroy')
+            .classList.remove('rotate180');
+        }
+      });
+    }
+
+    // Обработчик клика по кнопке меню
+    dropdownButtons.forEach((toggle) => {
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const parentDropdown = this.parentElement;
+
+        closestAllDropMenu(parentDropdown);
+
+        parentDropdown
+          .querySelector('.header__drop-menu')
+          .classList.toggle('visible-block');
+
+        parentDropdown
+          .querySelector('.header__nav-arroy')
+          .classList.toggle('rotate180');
+      });
+    });
+
+    // Обработчик клика по ссылке в меню
+    dropdownLinks.forEach((link) => {
+      link.addEventListener('click', function () {
+        // this.closest(".header__drop-menu").classList.remove("visible-block");
+        closestAllDropMenu(null);
+      });
+    });
+
+    // Закрыть меню при клике вне его
+    document.addEventListener('click', function () {
+      closestAllDropMenu(null);
+    });
+
+    // Предотвратить закрытие при клике внутри меню
+    document.querySelectorAll('.header__drop-menu').forEach((content) => {
+      content.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+    });
+  }
+
+  initDropdown();
+</script>

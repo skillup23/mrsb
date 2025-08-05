@@ -31,8 +31,12 @@
   text-transform: uppercase;
 }
 
+.servises_img-main {
+  width: 100vw;
+}
+
 .servises_text {
-  width: 70vw;
+  width: 71vw;
   padding-top: 2vh;
 }
 
@@ -50,4 +54,36 @@
 
 .servises_shema {
   margin-top: 4vh;
+  width: 100%;
+}
+
+.servises h4 {
+  margin-top: 6vh;
+  font-size: 1.6vw;
+  color: var(--first-color);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.servises ul {
+  margin-top: 4vh;
+}
+
+.servises li {
+  margin-top: 2vh;
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+}
+
+.servises h6 {
+  font-weight: 500;
+  font-size: 1.6vw;
+}
+
+.servises_check {
+  width: 2.5vw;
+}
+
+.servises .footer {
+  margin-top: 8vh;
 }

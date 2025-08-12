@@ -1,46 +1,46 @@
 /*=============== FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/TTTravels/TTTravels-Regular.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Regular.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: italic;
   font-weight: 400;
-  src: url("fonts/TTTravels/TTTravels-Italic.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Italic.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: italic;
   font-weight: 600;
-  src: url("fonts/TTTravels/TTTravels-BoldItalic.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-BoldItalic.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 600;
-  src: url("fonts/TTTravels/TTTravels-Bold.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Bold.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 500;
-  src: url("fonts/TTTravels/TTTravels-Medium.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-Medium.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 800;
-  src: url("fonts/TTTravels/TTTravels-ExtraBold.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-ExtraBold.woff2') format('woff2');
 }
 @font-face {
-  font-family: "TTTravels";
+  font-family: 'TTTravels';
   font-style: normal;
   font-weight: 550;
-  src: url("fonts/TTTravels/TTTravels-DemiBold.woff2") format("woff2");
+  src: url('fonts/TTTravels/TTTravels-DemiBold.woff2') format('woff2');
 }
 
 /*=============== VARIABLES CSS ===============*/
@@ -50,6 +50,7 @@
   --first-color: #902c4f;
   --first-color-hover: #951441;
   --second-color: #0a99b2;
+  --second-color-dialog: #1d8193;
   --text-color: hsl(0, 0%, 0%);
   --text-color-light: hsl(0, 0%, 100%);
   --text-color-hover: hsl(0, 0%, 78%);
@@ -59,7 +60,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "TTTravels", "Open Sans", sans-serif;
+  --body-font: 'TTTravels', 'Open Sans', sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 3.5vw;
   --h2-font-size: 2.9vw;
@@ -69,8 +70,13 @@
   --h6-font-size: 1.4vw;
   --p-font-size: 1.4vw;
   --normal-font-size: 1.5vw;
-  --small-font-size: 1.4vw;
-  --smaller-font-size: 1.3vw;
+  --small-font-size: 1.3vw;
+  --smaller-font-size: 1.2vw;
+}
+
+html,
+body {
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -78,6 +84,11 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   margin: 0;
+}
+
+/* Для отключения скролла модального окна */
+.scroll-lock {
+  overflow: hidden;
 }
 
 button {
@@ -168,10 +179,16 @@ input::placeholder {
   color: var(--text-color-light);
   font-family: var(--body-font);
 }
-input[type="checkbox" i] {
+input[type='checkbox' i] {
   width: 45px;
   accent-color: var(--first-color);
   border: none;
+}
+
+dialog {
+  padding: 4vw;
+  border: 0px;
+  border-radius: 12px;
 }
 
 .section {
@@ -203,7 +220,8 @@ input[type="checkbox" i] {
 /*=============== HEADER ===============*/
 header {
   background-color: var(--body-color-dark);
-  padding-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 .header__section {
   margin-left: 60px;
@@ -217,7 +235,7 @@ header {
 }
 
 .header__logo {
-  width: 12vw;
+  width: 10vw;
 }
 
 .header__nav {
@@ -234,7 +252,7 @@ header {
   transition: opacity 0.1s ease-in-out;
   cursor: pointer;
   color: var(--text-color-light);
-  font-size: var(--small-font-size);
+  font-size: var(--smaller-font-size);
 }
 .header__nav-link:hover {
   opacity: 0.7;
@@ -271,7 +289,7 @@ header {
 .header__button-feed {
   padding: 15px 24px;
   border-radius: 8px;
-  font-size: var(--small-font-size);
+  font-size: var(--smaller-font-size);
 }
 
 /*=============== FIRST SCREEN ===============*/
@@ -318,8 +336,8 @@ header {
   margin-top: -35vw;
   margin-left: -1vw;
 
-  -webkit-mask-image: url("files/videoMask.svg");
-  mask-image: url("files/videoMask.svg");
+  -webkit-mask-image: url('files/videoMask.svg');
+  mask-image: url('files/videoMask.svg');
 
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
@@ -342,7 +360,7 @@ header {
 
 /*=============== COMPANY ===============*/
 .company {
-  background-image: url("/assets/files/o-kompany-fon.jpg");
+  background-image: url('/assets/files/o-kompany-fon.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -532,46 +550,46 @@ header {
 
 .yslugi_1 {
   grid-column: span 3 / span 3;
-  background: url("/assets/files/yslugi-1.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-1.jpg') no-repeat center;
 }
 .yslugi_2 {
   grid-column: span 3 / span 3;
   grid-column-start: 4;
-  background: url("/assets/files/yslugi-2.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-2.jpg') no-repeat center;
 }
 .yslugi_3 {
   grid-column: span 2 / span 2;
   grid-row-start: 2;
-  background: url("/assets/files/yslugi-3.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-3.jpg') no-repeat center;
 }
 .yslugi_4 {
   grid-column: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 2;
-  background: url("/assets/files/yslugi-4.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-4.jpg') no-repeat center;
 }
 .yslugi_5 {
   grid-column: span 2 / span 2;
   grid-column-start: 5;
   grid-row-start: 2;
-  background: url("/assets/files/yslugi-5.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-5.jpg') no-repeat center;
 }
 .yslugi_6 {
   grid-column: span 2 / span 2;
   grid-row-start: 3;
-  background: url("/assets/files/yslugi-6.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-6.jpg') no-repeat center;
 }
 .yslugi_7 {
   grid-column: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 3;
-  background: url("/assets/files/yslugi-7.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-7.jpg') no-repeat center;
 }
 .yslugi_8 {
   grid-column: span 2 / span 2;
   grid-column-start: 5;
   grid-row-start: 3;
-  background: url("/assets/files/yslugi-8.jpg") no-repeat center;
+  background: url('/assets/files/yslugi-8.jpg') no-repeat center;
 }
 
 .yslugi_card {
@@ -632,7 +650,7 @@ header {
 }
 .feedback_content {
   padding: 4vw 2.7vw;
-  background-image: url("/assets/files/feed-back-fon.jpg");
+  background-image: url('/assets/files/feed-back-fon.jpg');
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -849,7 +867,7 @@ header {
 /*=============== FOOTER ===============*/
 .footer {
   margin-top: 8vh;
-  background-image: url("/assets/files/footer-fon.jpg");
+  background-image: url('/assets/files/footer-fon.jpg');
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;

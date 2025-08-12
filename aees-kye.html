@@ -60,8 +60,196 @@
             alt="Схема"
             class="servises_shema"
           />
+
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">преимущества</div>
+              <div class="accordion-content">
+                <ul>
+                  <li>
+                    <img
+                      src="/assets/files/servises/check.svg"
+                      alt="Чек"
+                      class="servises_check"
+                    />
+                    <h6>Почасовой контроль электропотребления</h6>
+                  </li>
+                  <li>
+                    <img
+                      src="/assets/files/servises/check.svg"
+                      alt="Чек"
+                      class="servises_check"
+                    />
+                    <h6>Хранение данных учета</h6>
+                  </li>
+                  <li>
+                    <img
+                      src="/assets/files/servises/check.svg"
+                      alt="Чек"
+                      class="servises_check"
+                    />
+                    <h6>Аналитика электропотребления</h6>
+                  </li>
+                  <li>
+                    <img
+                      src="/assets/files/servises/check.svg"
+                      alt="Чек"
+                      class="servises_check"
+                    />
+                    <h6>Выявление несанкционированного потребления</h6>
+                  </li>
+                  <li>
+                    <img
+                      src="/assets/files/servises/check.svg"
+                      alt="Чек"
+                      class="servises_check"
+                    />
+                    <h6>Предотвращение вмешательства в систему учета</h6>
+                  </li>
+                  <li>
+                    <img
+                      src="/assets/files/servises/check.svg"
+                      alt="Чек"
+                      class="servises_check"
+                    />
+                    <h6>
+                      Автоматизация процесса учета электроэнергии, сокращение
+                      операционной деятельности
+                    </h6>
+                  </li>
+                  <li>
+                    <img
+                      src="/assets/files/servises/check.svg"
+                      alt="Чек"
+                      class="servises_check"
+                    />
+                    <h6>
+                      Возможность выхода на оптовый рынок электроэнергии и
+                      мощности (ОРЭМ)
+                    </h6>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">этапы</div>
+              <div class="accordion-content">
+                <ul>
+                  <li>
+                    <div class="accordeon-content-num">1</div>
+                    <h6>Предпроектное обследование</h6>
+                  </li>
+                  <li>
+                    <div class="accordeon-content-num">2</div>
+                    <h6>Разработка технических условий</h6>
+                  </li>
+                  <li>
+                    <div class="accordeon-content-num">3</div>
+                    <h6>
+                      Разработка и согласование технико-коммерческого
+                      предложения
+                    </h6>
+                  </li>
+                  <li>
+                    <div class="accordeon-content-num">4</div>
+                    <h6>Проектирование системы</h6>
+                  </li>
+                  <li>
+                    <div class="accordeon-content-num">5</div>
+                    <h6>Поставка оборудования</h6>
+                  </li>
+                  <li>
+                    <div class="accordeon-content-num">6</div>
+                    <h6>Монтаж системы</h6>
+                  </li>
+                  <li>
+                    <div class="accordeon-content-num">7</div>
+                    <h6>
+                      Настройка сбора и передачи данных, сдача в опытную
+                      эксплуатацию
+                    </h6>
+                  </li>
+                  <li>
+                    <div class="accordeon-content-num">8</div>
+                    <h6>Метрологическая аттестация</h6>
+                  </li>
+                  <li>
+                    <div class="accordeon-content-num">9</div>
+                    <h6>
+                      Проведение испытаний, сдача в промышленную эксплуатацию
+                    </h6>
+                  </li>
+                </ul>
+                <p>
+                  Весь комплекс мероприятий занимает от 4 до 9 месяцев, в
+                  зависимости от количества точек учета.
+                </p>
+                <p>
+                  При заключении договора энергоснабжения,
+                  <span>Межрегионсбыт</span> осуществит внедрение системы АИИС
+                  КУЭ за счет собственных сил и средств
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button class="servises_button-feedback" type="button">
+            получить услугу
+          </button>
         </div>
       </section>
+
+      <!-- =============== Модальное окно =============== -->
+      <dialog id="feedBack" class="servises-dialog">
+        <form id="feedback-form" class="feedback_form popup_form">
+          <div class="feedback_form-content popup_form-content">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Имя"
+              required
+              class="feedback_input popup_input"
+            />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Телефон"
+              required
+              class="feedback_input popup_input"
+            />
+          </div>
+
+          <input
+            id="message"
+            name="message"
+            placeholder="Текст обращения"
+            required
+            class="feedback_textarea popup_textarea"
+          />
+
+          <div
+            class="feedback_form-content feedback_form-content-last popup_content-last"
+          >
+            <button type="submit" class="feedback_button popup_button-submit">
+              Отправить
+            </button>
+            <div class="feedback_form-checkbox">
+              <input type="checkbox" id="agree" name="agree" required />
+              <label for="agree" class="feedback_form-label popup_form-label"
+                >Отправляя форму заявки вы даете
+                <a href="#" class="feedback_document popup_document"
+                  >согласие на&nbsp;обработку персональных данных</a
+                ></label
+              >
+            </div>
+          </div>
+
+          <div class="popup-close">x</div>
+        </form>
+      </dialog>
     </main>
 
     <!-- =============== FOOTER =============== -->
@@ -69,6 +257,8 @@
 
     <script src="assets/header.js"></script>
     <script src="assets/footer.js"></script>
-    <script src="assets/script.js"></script>
+    <script src="assets/accordeon.js"></script>
+    <script src="assets/submitTelegram.js"></script>
+    <script src="assets/popup.js"></script>
   </body>
 </html>

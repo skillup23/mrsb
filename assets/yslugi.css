@@ -32,7 +32,7 @@
 }
 
 .servises_img-main {
-  width: 100vw;
+  width: 100%;
 }
 
 .servises_text {
@@ -69,10 +69,10 @@
 }
 
 .servises li {
-  margin-top: 2vh;
+  margin-top: 3vh;
   display: flex;
   align-items: center;
-  gap: 0.6vw;
+  gap: 1vw;
 }
 
 .servises h6 {
@@ -81,9 +81,128 @@
 }
 
 .servises_check {
-  width: 2.5vw;
+  width: 2vw;
+  margin-top: -2px;
 }
 
 .servises .footer {
   margin-top: 8vh;
+}
+
+.servises_button-feedback {
+  display: block;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 24px;
+  border-radius: 8px;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+}
+
+.servises-dialog {
+  border: none;
+  padding: 0;
+}
+
+.popup_form {
+  position: relative;
+  padding: 4vw;
+  border: 0px;
+  border-radius: 12px;
+  background-color: var(--second-color-dialog);
+  background-position: left;
+}
+
+.popup-close {
+  position: absolute;
+  top: 1vw;
+  right: 1.5vw;
+  cursor: pointer;
+  font-size: var(--h4-font-size);
+  font-weight: 500;
+  color: var(--text-color-light);
+}
+
+.popup_textarea {
+  margin-top: 6vh;
+}
+
+.popup_content-last {
+  margin-top: 6vh;
+}
+
+.popup_form-label {
+  color: var(--text-color-light);
+}
+
+.popup_button-submit {
+  padding: 1vw;
+}
+
+/* Аккордеон */
+.accordion {
+  width: 100%;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #353234;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  padding: 3vh;
+  cursor: pointer;
+  border-bottom: 1px solid #353234;
+  color: var(--first-color);
+  font-size: var(--h5-font-size);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.accordion-content {
+  padding: 0 3vh;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-content ul {
+  margin: 2vh 0;
+}
+
+.accordeon-content-num {
+  width: 2vw;
+  height: 2vw;
+  background-color: var(--first-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color-light);
+  font-size: 1.4vw;
+  font-weight: 500;
+}
+
+.accordion-header::after {
+  content: '+';
+  margin-top: -1.5vh;
+  float: right;
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--h3-font-size);
+  font-weight: 400;
+}
+
+.accordion-header.active::after {
+  content: '–';
+}
+
+.accordion-content p {
+  margin-bottom: 2vh;
+  font-size: var(--smaller-font-size);
+}
+
+.accordion-content p span {
+  color: var(--first-color);
+  font-weight: 550;
 }

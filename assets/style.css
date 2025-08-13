@@ -74,6 +74,10 @@
   --smaller-font-size: 1.2vw;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   scrollbar-gutter: stable;
@@ -189,6 +193,10 @@ dialog {
   padding: 4vw;
   border: 0px;
   border-radius: 12px;
+}
+
+dialog:-internal-dialog-in-top-layer::backdrop {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .section {

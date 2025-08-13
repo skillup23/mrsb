@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/files/logoLiterM.svg"
+      type="image/x-icon"
+    />
+    <title>Покупка Генерации</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/yslugi.css" />
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <div id="header"></div>
+
+    <main>
+      <section class="servises">
+        <div class="section">
+          <div class="servises_buttom-back">
+            <a href="/"
+              ><img
+                src="/assets/files/arrow-black.svg"
+                alt="стрелочка вправо"
+              />
+              вернуться на главную</a
+            >
+          </div>
+
+          <h1>Покупка Генерации</h1>
+        </div>
+        <img
+          src="/assets/files/servises/img-6.jpg"
+          alt="Картинка"
+          class="servises_img-main"
+        />
+        <div class="section">
+          <div class="servises_text">
+            <p>
+              Если вы являетесь собственником генерирующих устройств, и у Вас
+              возникают излишки выработанной электрической энергии,
+              <span>Межрегионсбыт</span> готово на постоянной основе
+              осуществлять покупку розничной генерации в необходимом для Вас
+              объёме.
+            </p>
+          </div>
+
+          <h4 class="servises_advantages-title">преимущества</h4>
+          <div class="servises_advantages">
+            <div class="servises_advantages-cart">
+              <img
+                src="/assets/files/servises/advantages-1.svg"
+                alt="преимущества"
+              />
+              <p>Снижение себестоимости электроэнергии</p>
+            </div>
+            <div class="servises_advantages-cart">
+              <img
+                src="/assets/files/servises/advantages-2.svg"
+                alt="преимущества"
+              />
+              <p>
+                Внереализационный <br />
+                доход
+              </p>
+            </div>
+            <div class="servises_advantages-cart">
+              <img
+                src="/assets/files/servises/advantages-3.svg"
+                alt="преимущества"
+              />
+              <p>Оптимизация режима работы генерации</p>
+            </div>
+          </div>
+
+          <button class="servises_button-feedback" type="button">
+            получить услугу
+          </button>
+        </div>
+      </section>
+
+      <!-- =============== Модальное окно =============== -->
+      <dialog id="feedBack" class="servises-dialog">
+        <form id="feedback-form" class="feedback_form popup_form">
+          <div class="feedback_form-content popup_form-content">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Имя"
+              required
+              class="feedback_input popup_input"
+            />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Телефон"
+              required
+              class="feedback_input popup_input"
+            />
+          </div>
+
+          <input
+            id="message"
+            name="message"
+            placeholder="Текст обращения"
+            required
+            class="feedback_textarea popup_textarea"
+          />
+
+          <div
+            class="feedback_form-content feedback_form-content-last popup_content-last"
+          >
+            <button type="submit" class="feedback_button popup_button-submit">
+              Отправить
+            </button>
+            <div class="feedback_form-checkbox">
+              <input type="checkbox" id="agree" name="agree" required />
+              <label for="agree" class="feedback_form-label popup_form-label"
+                >Отправляя форму заявки вы даете
+                <a href="#" class="feedback_document popup_document"
+                  >согласие на&nbsp;обработку персональных данных</a
+                ></label
+              >
+            </div>
+          </div>
+
+          <div class="popup-close">x</div>
+        </form>
+      </dialog>
+    </main>
+
+    <!-- =============== FOOTER =============== -->
+    <div id="footer"></div>
+
+    <script src="assets/header.js"></script>
+    <script src="assets/footer.js"></script>
+    <script src="assets/accordeon.js"></script>
+    <script src="assets/submitTelegram.js"></script>
+    <script src="assets/popup.js"></script>
+  </body>
+</html>

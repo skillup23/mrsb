@@ -85,6 +85,30 @@
   margin-top: -2px;
 }
 
+.servises_list-1 li {
+  margin-top: 4.5vh;
+}
+
+.servises_list-1 h6 {
+  font-weight: 550;
+}
+
+.servises_list-1 .servises_check {
+  width: 2.5vw;
+}
+
+.servises .servises_list-2 {
+  margin-left: 3vw;
+  margin-top: 1vh;
+}
+
+.servises_list-2 li {
+  margin-top: 0;
+  font-size: var(--small-font-size);
+  font-weight: 550;
+  gap: 0;
+}
+
 .servises .footer {
   margin-top: 8vh;
 }
@@ -109,7 +133,7 @@
   position: relative;
   padding: 4vw;
   border: 0px;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: var(--second-color-dialog);
   background-position: left;
 }
@@ -138,6 +162,40 @@
 
 .popup_button-submit {
   padding: 1vw;
+}
+
+.servises_advantages-title {
+  margin-top: 8vh !important;
+}
+
+.servises_advantages {
+  margin-top: 4vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2vw;
+}
+
+.servises_advantages-cart {
+  padding: 8vh 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  border-radius: 12px;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #902c4f;
+}
+
+.servises_advantages-cart p {
+  text-align: center;
+  color: var(--text-color-light);
+  font-weight: 600;
 }
 
 /* Аккордеон */
@@ -185,16 +243,16 @@
 }
 
 .accordion-header::after {
-  content: "+";
+  content: '+';
   margin-top: -1.5vh;
   float: right;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: var(--h3-font-size);
   font-weight: 400;
 }
 
 .accordion-header.active::after {
-  content: "–";
+  content: '–';
 }
 
 .accordeon-text {

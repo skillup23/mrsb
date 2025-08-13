@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/files/logoLiterM.svg"
+      type="image/x-icon"
+    />
+    <title>Технологическое присоединение</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/yslugi.css" />
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <div id="header"></div>
+
+    <main>
+      <section class="servises">
+        <div class="section">
+          <div class="servises_buttom-back">
+            <a href="/"
+              ><img
+                src="/assets/files/arrow-black.svg"
+                alt="стрелочка вправо"
+              />
+              вернуться на главную</a
+            >
+          </div>
+
+          <h1>Технологическое присоединение</h1>
+        </div>
+        <img
+          src="/assets/files/servises/img-5.jpg"
+          alt="Картинка"
+          class="servises_img-main"
+        />
+        <div class="section">
+          <div class="servises_text">
+            <p>
+              <span
+                >Межрегионсбыт осуществит комплексное сопровождение и осуществит
+                «под ключ»</span
+              >
+              все мероприятия необходимые для осуществления нового
+              технологического присоединения, а также увеличения максимальной
+              мощности действующих объектов, а именно:
+            </p>
+          </div>
+
+          <ul class="servises_list-1">
+            <li>
+              <img
+                src="/assets/files/servises/fluent_check-24-regular.svg"
+                alt="Чек"
+                class="servises_check"
+              />
+              <h6>Оформление и подача заявки в адрес сетевой организации</h6>
+            </li>
+            <li>
+              <img
+                src="/assets/files/servises/line-md_check-list-3.svg"
+                alt="Чек"
+                class="servises_check"
+              />
+              <h6>
+                Проверка обоснованности технических условий, полученных от
+                сетевой организации:
+              </h6>
+            </li>
+            <ul class="servises_list-2">
+              <li>
+                <img src="/assets/files/servises/bi_dot.svg" alt="точка" />
+                Выбор оптимальных точек присоединения
+              </li>
+              <li>
+                <img
+                  src="/assets/files/servises/bi_dot.svg"
+                  alt="точка"
+                />Изменение категории надежности
+              </li>
+              <li>
+                <img
+                  src="/assets/files/servises/bi_dot.svg"
+                  alt="точка"
+                />Изменение мощности
+              </li>
+            </ul>
+            <li>
+              <img
+                src="/assets/files/servises/mdi_book-check-outline.svg"
+                alt="Чек"
+                class="servises_check"
+              />
+              <h6>
+                Правовой анализ договора об осуществлении технологического
+                присоединения
+              </h6>
+            </li>
+            <li>
+              <img
+                src="/assets/files/servises/lucide_copy-check.svg"
+                alt="Чек"
+                class="servises_check"
+              />
+              <h6>
+                Выполнение мероприятий, предусмотренных техническими условиями /
+                Контроль и минимизация сроков выполнения мероприятий,
+                выполняемых сетевой организацией
+              </h6>
+            </li>
+            <li>
+              <img
+                src="/assets/files/servises/mdi_energy-from-grid.svg"
+                alt="Чек"
+                class="servises_check"
+              />
+              <h6>
+                Согласование электроустановок с электросетевыми компаниями и
+                надзорными органами
+              </h6>
+            </li>
+            <li>
+              <img
+                src="/assets/files/servises/hugeicons_batteries-energy.svg"
+                alt="Чек"
+                class="servises_check"
+              />
+              <h6>
+                Фактическое присоединение энергопринимающих устройств к
+                электрическим сетям
+              </h6>
+            </li>
+            <li>
+              <img
+                src="/assets/files/servises/carbon_document-attachment.svg"
+                alt="Чек"
+                class="servises_check"
+              />
+              <h6>
+                Подписание акта об осуществлении технологического присоединения,
+                получение акта допуска электроустановки в эксплуатацию
+              </h6>
+            </li>
+            <li>
+              <img
+                src="/assets/files/servises/mdi_file-document-edit-outline.svg"
+                alt="Чек"
+                class="servises_check"
+              />
+              <h6>Заключение договора энергоснабжения</h6>
+            </li>
+            <li>
+              <img
+                src="/assets/files/servises/hugeicons_energy-ellipse.svg"
+                alt="Чек"
+                class="servises_check"
+              />
+              <h6>Подача напряжения на объект</h6>
+            </li>
+          </ul>
+
+          <button class="servises_button-feedback" type="button">
+            получить услугу
+          </button>
+        </div>
+      </section>
+
+      <!-- =============== Модальное окно =============== -->
+      <dialog id="feedBack" class="servises-dialog">
+        <form id="feedback-form" class="feedback_form popup_form">
+          <div class="feedback_form-content popup_form-content">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Имя"
+              required
+              class="feedback_input popup_input"
+            />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Телефон"
+              required
+              class="feedback_input popup_input"
+            />
+          </div>
+
+          <input
+            id="message"
+            name="message"
+            placeholder="Текст обращения"
+            required
+            class="feedback_textarea popup_textarea"
+          />
+
+          <div
+            class="feedback_form-content feedback_form-content-last popup_content-last"
+          >
+            <button type="submit" class="feedback_button popup_button-submit">
+              Отправить
+            </button>
+            <div class="feedback_form-checkbox">
+              <input type="checkbox" id="agree" name="agree" required />
+              <label for="agree" class="feedback_form-label popup_form-label"
+                >Отправляя форму заявки вы даете
+                <a href="#" class="feedback_document popup_document"
+                  >согласие на&nbsp;обработку персональных данных</a
+                ></label
+              >
+            </div>
+          </div>
+
+          <div class="popup-close">x</div>
+        </form>
+      </dialog>
+    </main>
+
+    <!-- =============== FOOTER =============== -->
+    <div id="footer"></div>
+
+    <script src="assets/header.js"></script>
+    <script src="assets/footer.js"></script>
+    <script src="assets/accordeon.js"></script>
+    <script src="assets/submitTelegram.js"></script>
+    <script src="assets/popup.js"></script>
+  </body>
+</html>

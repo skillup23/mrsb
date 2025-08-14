@@ -193,6 +193,18 @@ dialog {
   padding: 4vw;
   border: 0px;
   border-radius: 12px;
+
+  transition: display 0.3s allow-discrete, overlay 0.3s allow-discrete,
+    opacity 0.3s;
+  opacity: 0;
+
+  &[open] {
+    opacity: 1;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
 }
 
 dialog:-internal-dialog-in-top-layer::backdrop {
@@ -655,6 +667,7 @@ header {
 
 /*=============== ФОРМА ОБРАТНОЙ СВЯЗИ ===============*/
 .feedback {
+  scroll-margin-top: -10vh;
 }
 .feedback_content {
   padding: 4vw 2.7vw;

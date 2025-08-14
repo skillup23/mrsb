@@ -164,26 +164,34 @@
   padding: 1vw;
 }
 
-.servises_advantages-title {
-  margin-top: 8vh !important;
-}
-
-.servises_advantages {
+/* ++++++++++++++++++++ Карточки +++++++++++++++++++++ */
+.servises_carts {
   margin-top: 4vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 2vw;
 }
-
-.servises_advantages-cart {
-  padding: 8vh 0;
+.servises_cart {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 3vh;
   border-radius: 12px;
+}
+.servises_cart p {
+  color: var(--text-color-light);
+  font-weight: 600;
+}
+
+.servises_advantages-title {
+  margin-top: 8vh !important;
+}
+.servises_advantages {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.servises_advantages-cart {
+  padding: 8vh 0;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.5) 0%,
@@ -191,14 +199,27 @@
     ),
     #902c4f;
 }
-
 .servises_advantages-cart p {
   text-align: center;
-  color: var(--text-color-light);
-  font-weight: 600;
 }
 
-/* Аккордеон */
+.servises_green {
+  margin: 6vh 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.servises_green-cart {
+  padding: 2vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgba(59, 169, 189, 0) 0%, #3ba9bd 100%),
+    #262626;
+}
+.servises_green-cart p {
+  font-size: var(--smaller-font-size);
+}
+
+/*+++++++++++++++++++++++ Аккордеон +++++++++++++++++++++*/
 .accordion {
   width: 100%;
 }

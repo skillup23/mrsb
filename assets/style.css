@@ -63,7 +63,7 @@
   --body-font: 'TTTravels', 'Open Sans', sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 3.5vw;
-  --h2-font-size: 2.9vw;
+  --h2-font-size: 2.7vw;
   --h3-font-size: 3.1vw;
   --h4-font-size: 1.8vw;
   --h5-font-size: 1.6vw;
@@ -209,6 +209,10 @@ dialog {
 
 dialog:-internal-dialog-in-top-layer::backdrop {
   background: rgba(0, 0, 0, 0.4);
+}
+
+.scroll-margin {
+  scroll-margin-top: -10vh;
 }
 
 .section {

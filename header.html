@@ -1,65 +1,74 @@
 <header>
   <div class="header__section">
-    <nav class="header__nav">
+    <div class="header__wrap">
       <a href="/"
         ><img src="assets/files/logo_1.png" alt="logo" class="header__logo"
       /></a>
 
-      <a href="/#company" class="header__nav-link">О компании</a>
+      <nav class="header__nav">
+        <a href="/#company" class="header__nav-link">О компании</a>
 
-      <div class="header__drop-link">
-        <div class="header__nav-link header__nav-link-open">
-          Услуги
-          <img
-            src="/assets/files/arrow-down-white.png"
-            alt="Стрелка вниз"
-            class="header__nav-arroy"
-          />
-        </div>
-        <div class="header__drop-menu header__drop-menu-1 hidden-block">
-          <div class="header__drop-wrap">
-            <a href="/energosnab.html">Энергоснабжение</a>
-            <a href="/orem.html">ОРЭМ</a>
-            <a href="/aees-kye.html">АИИС КУЕ</a>
-            <a href="/buy-generation.html">Покупка генерации</a>
-            <a href="/consalting.html">Консалтинг</a>
-            <a href="/technological-connection.html"
-              >Технологическое присоединение</a
-            >
-            <a href="/design-and-construction.html"
-              >Проектирование и&nbsp;строительство</a
-            >
-            <a href="/green-energy.html">Зеленая энергия</a>
+        <div class="header__drop-link">
+          <div class="header__nav-link header__nav-link-open">
+            Услуги
+            <img
+              src="/assets/files/arrow-down-white.png"
+              alt="Стрелка вниз"
+              class="header__nav-arroy"
+            />
+          </div>
+          <div class="header__drop-menu header__drop-menu-1 hidden-block">
+            <div class="header__drop-wrap">
+              <a href="/energosnab.html">Энергоснабжение</a>
+              <a href="/orem.html">ОРЭМ</a>
+              <a href="/aees-kye.html">АИИС КУЕ</a>
+              <a href="/buy-generation.html">Покупка генерации</a>
+              <a href="/consalting.html">Консалтинг</a>
+              <a href="/technological-connection.html"
+                >Технологическое присоединение</a
+              >
+              <a href="/design-and-construction.html"
+                >Проектирование и&nbsp;строительство</a
+              >
+              <a href="/green-energy.html">Зеленая энергия</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="header__drop-link">
-        <div class="header__nav-link header__nav-link-open">
-          Информация
-          <img
-            src="/assets/files/arrow-down-white.png"
-            alt="Стрелка вниз"
-            class="header__nav-arroy"
-          />
-        </div>
-        <div class="header__drop-menu header__drop-menu-2 hidden-block">
-          <div class="header__drop-wrap">
-            <a href="/otchetnost.html">Отчетность</a>
-            <a href="/dogovor.html">Условия договора</a>
-            <a href="/norma-pravo-base.html">Нормативно-правовая база</a>
-            <a href="/rekviziti.html">Реквизиты</a>
-            <a href="/svidetelstva.html">Свидетельства</a>
+        <div class="header__drop-link">
+          <div class="header__nav-link header__nav-link-open">
+            Информация
+            <img
+              src="/assets/files/arrow-down-white.png"
+              alt="Стрелка вниз"
+              class="header__nav-arroy"
+            />
+          </div>
+          <div class="header__drop-menu header__drop-menu-2 hidden-block">
+            <div class="header__drop-wrap">
+              <a href="/otchetnost.html">Отчетность</a>
+              <a href="/dogovor.html">Условия договора</a>
+              <a href="/norma-pravo-base.html">Нормативно-правовая база</a>
+              <a href="/rekviziti.html">Реквизиты</a>
+              <a href="/svidetelstva.html">Свидетельства</a>
+            </div>
           </div>
         </div>
+
+        <a href="/#partners" class="header__nav-link">Партнеры</a>
+        <a href="/#contacts" class="header__nav-link">Контакты</a>
+      </nav>
+
+      <div class="burger" id="burger">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
       </div>
 
-      <a href="/#partners" class="header__nav-link">Партнеры</a>
-      <a href="/#contacts" class="header__nav-link">Контакты</a>
       <button class="header__button-feed">
-        <a href="/#feedbackMain">Оставить заявку</a>
+        <a href="/#feedbackMain">Оставить&nbsp;заявку</a>
       </button>
-    </nav>
+    </div>
   </div>
 </header>
 
@@ -67,63 +76,75 @@
   // +++++++++++ Раскрывающийся список в меню +++++++++
   // Слушатель по всему документу
   function initDropdown() {
-    const dropdowns = document.querySelectorAll('.header__drop-link');
-    const dropdownButtons = document.querySelectorAll('.header__nav-link-open');
-    const dropdownLinks = document.querySelectorAll('.header__drop-wrap a');
+    const dropdowns = document.querySelectorAll(".header__drop-link");
+    const dropdownButtons = document.querySelectorAll(".header__nav-link-open");
+    const dropdownLinks = document.querySelectorAll(".header__drop-wrap a");
 
     // Закрыть все выпадающие меню кроме текущего
     function closestAllDropMenu(exceptThis) {
       dropdowns.forEach((dropdown) => {
         if (dropdown !== exceptThis) {
           dropdown
-            .querySelector('.header__drop-menu')
-            .classList.remove('visible-block');
+            .querySelector(".header__drop-menu")
+            .classList.remove("visible-block");
 
           //Найти стрелку для переворота в родительском компоненте
-          const arrowParent = dropdown.closest('.header__drop-link');
+          const arrowParent = dropdown.closest(".header__drop-link");
           arrowParent
-            .querySelector('.header__nav-arroy')
-            .classList.remove('rotate180');
+            .querySelector(".header__nav-arroy")
+            .classList.remove("rotate180");
         }
       });
     }
 
     // Обработчик клика по кнопке меню
     dropdownButtons.forEach((toggle) => {
-      toggle.addEventListener('click', function (e) {
+      toggle.addEventListener("click", function (e) {
         e.stopPropagation();
         const parentDropdown = this.parentElement;
 
         closestAllDropMenu(parentDropdown);
 
         parentDropdown
-          .querySelector('.header__drop-menu')
-          .classList.toggle('visible-block');
+          .querySelector(".header__drop-menu")
+          .classList.toggle("visible-block");
 
         parentDropdown
-          .querySelector('.header__nav-arroy')
-          .classList.toggle('rotate180');
+          .querySelector(".header__nav-arroy")
+          .classList.toggle("rotate180");
       });
     });
 
     // Обработчик клика по ссылке в меню
     dropdownLinks.forEach((link) => {
-      link.addEventListener('click', function () {
+      link.addEventListener("click", function () {
         // this.closest(".header__drop-menu").classList.remove("visible-block");
         closestAllDropMenu(null);
       });
     });
 
     // Закрыть меню при клике вне его
-    document.addEventListener('click', function () {
+    document.addEventListener("click", function () {
       closestAllDropMenu(null);
     });
 
     // Предотвратить закрытие при клике внутри меню
-    document.querySelectorAll('.header__drop-menu').forEach((content) => {
-      content.addEventListener('click', function (e) {
+    document.querySelectorAll(".header__drop-menu").forEach((content) => {
+      content.addEventListener("click", function (e) {
         e.stopPropagation();
       });
+    });
+
+    // Бургер меню
+    const burger = document.getElementById("burger");
+    const nav = document.querySelector(".header__nav");
+    const body = document.body;
+
+    // Открытие/закрытие меню
+    burger.addEventListener("click", function () {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+      body.classList.toggle("no-scroll");
     });
   }
 

@@ -1,0 +1,77 @@
+/*=============== FOOTER ===============*/
+.footer {
+  margin-top: 8vh;
+  background-image: url("/assets/files/footer-fon.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  color: var(--text-color-light);
+}
+.footer .section {
+  padding-top: 10vh;
+  padding-bottom: 8vh;
+}
+
+.footer_content {
+  width: 65vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer_logo {
+  width: 22vw;
+  margin-right: 3vw;
+}
+
+.footer_column {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  width: 13vw;
+}
+
+.footer_column h6 {
+  font-size: var(--smaller-font-size);
+  font-weight: 500;
+  margin-bottom: 2vh;
+}
+
+.footer_column a,
+.footer_column p {
+  font-size: 1vw;
+  font-weight: 400;
+}
+
+.footer_column a,
+.footer_column p {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  transition: color 0.1s ease-in-out;
+}
+.footer_column a:hover {
+  color: var(--text-color-hover);
+}
+.footer_column a img {
+  width: 1.2vw;
+}
+.footer_column a:hover img {
+  color: var(--text-color-hover);
+}
+
+.footer_copyright {
+  margin-top: 20vh;
+  display: flex;
+  gap: 2.8vw;
+}
+
+.footer_copyright p,
+.footer_copyright a {
+  font-size: 0.9vw;
+  transition: color 0.1s ease-in-out;
+}
+
+.footer_copyright a {
+  color: var(--text-color-hover);
+}

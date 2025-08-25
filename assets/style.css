@@ -823,10 +823,10 @@ dialog:-internal-dialog-in-top-layer::backdrop {
     --h2-font-size: 4.3vw;
     --h3-font-size: 6.5vw;
     --h4-font-size: 4vw;
-    --h5-font-size: 1.6vw;
-    --h6-font-size: 1.4vw;
+    --h5-font-size: 4.5vw;
+    --h6-font-size: 4vw;
     --p-font-size: 4.1vw;
-    --normal-font-size: 1.5vw;
+    --normal-font-size: 4vw;
     --small-font-size: 3vw;
     --smaller-font-size: 1.2vw;
   }
@@ -836,7 +836,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   }
 
   .visible-block {
-    max-height: 100vh;
+    max-height: 170vh;
   }
 
   .section {
@@ -944,6 +944,64 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
   .regions_button img {
     width: 8vw;
+  }
+  .regions {
+    margin-top: 5vw;
+  }
+  .regions_content {
+    padding: 2vw 20px 6vw 20px;
+    flex-direction: column;
+  }
+  .regions_content h6 {
+    font-size: var(--h6-font-size);
+    margin-top: 4vw;
+    margin-bottom: 1.5vw;
+  }
+  .regions_list li {
+    font-size: var(--h6-font-size);
+  }
+  .regions_two-colomn {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .yslugi_parent {
+    margin-top: 6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+  }
+  .yslugi_card-content {
+    padding: 6vw 4vw;
+  }
+  .yslugi_card {
+    border-radius: 10px;
+    height: 60vw;
+  }
+  .yslugi_card-content p {
+    font-size: var(--normal-font-size);
+  }
+
+  .advantage {
+    margin-top: 4vw;
+  }
+  .advantage_all-cards {
+    margin-top: 6vw;
+    grid-template-columns: 1fr;
+  }
+  .advantage_card {
+    height: 65vw;
+  }
+  .front,
+  .back {
+    padding: 6vw;
+    height: 54vw;
+  }
+  .advantage_card img {
+    width: 25vw;
+  }
+  .back p {
+    font-size: var(--normal-font-size);
   }
 }
 

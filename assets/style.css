@@ -310,7 +310,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
 /*=============== COMPANY ===============*/
 .company {
-  background-image: url("/assets/files/o-kompany-fon.jpg");
+  background-image: url("files/o-kompany-fon.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -500,46 +500,46 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
 .yslugi_1 {
   grid-column: span 3 / span 3;
-  background: url("/assets/files/yslugi-1.jpg") no-repeat center;
+  background: url("files/yslugi-1.jpg") no-repeat center;
 }
 .yslugi_2 {
   grid-column: span 3 / span 3;
   grid-column-start: 4;
-  background: url("/assets/files/yslugi-2.jpg") no-repeat center;
+  background: url("files/yslugi-2.jpg") no-repeat center;
 }
 .yslugi_3 {
   grid-column: span 2 / span 2;
   grid-row-start: 2;
-  background: url("/assets/files/yslugi-3.jpg") no-repeat center;
+  background: url("files/yslugi-3.jpg") no-repeat center;
 }
 .yslugi_4 {
   grid-column: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 2;
-  background: url("/assets/files/yslugi-4.jpg") no-repeat center;
+  background: url("files/yslugi-4.jpg") no-repeat center;
 }
 .yslugi_5 {
   grid-column: span 2 / span 2;
   grid-column-start: 5;
   grid-row-start: 2;
-  background: url("/assets/files/yslugi-5.jpg") no-repeat center;
+  background: url("files/yslugi-5.jpg") no-repeat center;
 }
 .yslugi_6 {
   grid-column: span 2 / span 2;
   grid-row-start: 3;
-  background: url("/assets/files/yslugi-6.jpg") no-repeat center;
+  background: url("files/yslugi-6.jpg") no-repeat center;
 }
 .yslugi_7 {
   grid-column: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 3;
-  background: url("/assets/files/yslugi-7.jpg") no-repeat center;
+  background: url("files/yslugi-7.jpg") no-repeat center;
 }
 .yslugi_8 {
   grid-column: span 2 / span 2;
   grid-column-start: 5;
   grid-row-start: 3;
-  background: url("/assets/files/yslugi-8.jpg") no-repeat center;
+  background: url("files/yslugi-8.jpg") no-repeat center;
 }
 
 .yslugi_card {
@@ -601,7 +601,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .feedback_content {
   padding: 4vw 2.7vw;
-  background-image: url("/assets/files/feed-back-fon.jpg");
+  background-image: url("files/feed-back-fon.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -876,7 +876,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
   .company {
     margin-top: 0;
-    background-image: url("/assets/files/o-kompany-fon-mob.jpg");
+    background-image: url("files/o-kompany-fon-mob.jpg");
     background-position: left;
   }
   .company_content {

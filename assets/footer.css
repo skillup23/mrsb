@@ -75,3 +75,57 @@
 .footer_copyright a {
   color: var(--text-color-hover);
 }
+
+/*=============== MEDIA SCREEN ===============*/
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 12vw;
+    background-image: url(files/footer-fon-mob.jpg);
+    background-position: top;
+    position: relative;
+  }
+  .footer .section {
+    padding-bottom: 12vw;
+  }
+  .footer_content {
+    width: 100%;
+    margin-top: 28vw;
+    flex-wrap: wrap;
+  }
+  .footer_logo {
+    position: absolute;
+    top: 10vw;
+    width: 35vw;
+  }
+  .footer_column {
+    width: 45%;
+  }
+  .footer_column h6 {
+    font-size: 3.5vw;
+    color: var(--first-color);
+    margin-bottom: 0;
+  }
+  .footer_column a,
+  .footer_column p {
+    font-size: var(--small-font-size);
+    gap: 3vw;
+  }
+  .footer_column-last {
+    margin-top: 8vw;
+  }
+  .footer_column a img {
+    width: 5vw;
+  }
+  .footer_copyright {
+    margin-top: 12vw;
+    flex-direction: column;
+    gap: 6vw;
+  }
+  .footer_copyright p,
+  .footer_copyright a {
+    font-size: var(--small-font-size);
+  }
+  .footer_copyright a {
+    text-decoration: underline;
+  }
+}

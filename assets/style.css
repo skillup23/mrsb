@@ -1119,6 +1119,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
     width: 100%;
     height: 30vh;
   }
+  .my-marker {
+    width: 6vw;
+  }
 }
 
 @media screen and (min-width: 768px) {

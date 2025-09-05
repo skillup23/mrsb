@@ -241,6 +241,22 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   rotate: 180deg;
 }
 
+#header {
+  min-height: 7.8vw; /* Примерная высота вашего header */
+  position: relative;
+  background-color: var(--body-color-dark);
+}
+
+/* Стиль для состояния загрузки */
+#header:empty::before {
+  content: 'Загрузка...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+}
+
 /*=============== FIRST SCREEN ===============*/
 .first {
   position: relative;
@@ -843,6 +859,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   .section {
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+  #header {
+    min-height: 20vw; /* Примерная высота вашего header */
+    position: relative;
+    background-color: var(--body-color-dark);
   }
 
   .first {

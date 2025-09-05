@@ -1,8 +1,8 @@
 function loadAndInitHeader() {
-  const headerPlaceholder = document.getElementById("header");
+  const headerPlaceholder = document.getElementById('header');
   if (!headerPlaceholder) return;
 
-  fetch("header.html")
+  fetch('header.html')
     .then((response) => response.text())
     .then((html) => {
       headerPlaceholder.innerHTML = html;
@@ -11,10 +11,10 @@ function loadAndInitHeader() {
 }
 
 function executeHeaderScripts() {
-  const scripts = document.getElementById("header").querySelectorAll("script");
+  const scripts = document.getElementById('header').querySelectorAll('script');
 
   scripts.forEach((script) => {
-    const newScript = document.createElement("script");
+    const newScript = document.createElement('script');
     if (script.src) {
       newScript.src = script.src;
       document.head.appendChild(newScript);
@@ -26,10 +26,10 @@ function executeHeaderScripts() {
 }
 
 // Запускаем когда DOM готов
-document.addEventListener("readystatechange", () => {
+document.addEventListener('readystatechange', () => {
   if (
-    document.readyState === "interactive" ||
-    document.readyState === "complete"
+    document.readyState === 'interactive' ||
+    document.readyState === 'complete'
   ) {
     loadAndInitHeader();
   }

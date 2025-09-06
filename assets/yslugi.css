@@ -9,7 +9,7 @@
 
 .servises_first {
   position: relative;
-  height: 70vh;
+  height: 71vh;
   padding: 8vh 60px;
   display: flex;
   align-items: flex-end;
@@ -24,7 +24,7 @@
       rgba(0, 0, 0, 0) 58.8%,
       rgba(0, 0, 0, 0.8) 85.7%
     ),
-    url("/assets/files/servises/img-1.jpg");
+    url("files/servises/img-1.jpg");
 }
 
 .servises a {
@@ -441,5 +441,38 @@
   }
   .servises_title-box h1 {
     font-size: 5vw;
+  }
+
+  .servises_text {
+    width: 100%;
+  }
+
+  .servises_text p {
+    font-size: 3.8vw;
+    margin-bottom: 3vh;
+  }
+
+  .servises_shema {
+    margin-top: 0;
+    margin-left: -20px;
+    width: 100vw;
+  }
+
+  .servises ul {
+    margin-top: 2vh;
+  }
+  .servises li {
+    margin-top: 2vh;
+    gap: 2vw;
+  }
+  .servises h4 {
+    margin-top: 2vh;
+    font-size: 3.8vw;
+  }
+  .servises_check {
+    width: 5vw;
+  }
+  .servises h6 {
+    font-size: 3.8vw;
   }
 }

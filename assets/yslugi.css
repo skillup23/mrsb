@@ -27,6 +27,69 @@
     url("files/servises/img-1.jpg");
 }
 
+.orem {
+  background-image: linear-gradient(
+      177.87deg,
+      rgba(0, 0, 0, 0) 58.8%,
+      rgba(0, 0, 0, 0.8) 85.7%
+    ),
+    url("files/servises/img-2.jpg");
+}
+
+.aees-kye {
+  background-image: linear-gradient(
+      177.87deg,
+      rgba(0, 0, 0, 0) 58.8%,
+      rgba(0, 0, 0, 0.8) 85.7%
+    ),
+    url("files/servises/img-3.jpg");
+}
+
+.buy-generation {
+  background-image: linear-gradient(
+      177.87deg,
+      rgba(0, 0, 0, 0) 58.8%,
+      rgba(0, 0, 0, 0.8) 85.7%
+    ),
+    url("files/servises/img-6.jpg");
+}
+
+.consalting {
+  background-image: linear-gradient(
+      177.87deg,
+      rgba(0, 0, 0, 0) 58.8%,
+      rgba(0, 0, 0, 0.8) 85.7%
+    ),
+    url("files/servises/img-4.jpg");
+}
+
+.tech-connect {
+  background-image: linear-gradient(
+      177.87deg,
+      rgba(0, 0, 0, 0) 58.8%,
+      rgba(0, 0, 0, 0.8) 85.7%
+    ),
+    url("files/servises/img-5.jpg");
+}
+
+.design-const {
+  background-image: linear-gradient(
+      177.87deg,
+      rgba(0, 0, 0, 0) 58.8%,
+      rgba(0, 0, 0, 0.8) 85.7%
+    ),
+    url("files/servises/img-7.jpg");
+}
+
+.green-energy {
+  background-image: linear-gradient(
+      177.87deg,
+      rgba(0, 0, 0, 0) 58.8%,
+      rgba(0, 0, 0, 0.8) 85.7%
+    ),
+    url("files/servises/img-8.jpg");
+}
+
 .servises a {
   color: var(--text-color);
   display: flex;
@@ -46,7 +109,7 @@
   width: 1.7vw;
 }
 
-.servises_title-box {
+.servises_first h1 {
   color: var(--text-color-light);
 }
 
@@ -364,6 +427,9 @@
 }
 
 /* ++++++++++++++ Информация ++++++++++++++++ */
+.information-page h1 {
+  margin-top: 3vh;
+}
 
 .info-do_list li {
   margin-top: 5vh;
@@ -458,11 +524,15 @@
     width: 100vw;
   }
 
+  .servises a {
+    font-size: 5vw;
+  }
+
   .servises ul {
     margin-top: 2vh;
   }
   .servises li {
-    margin-top: 2vh;
+    margin-top: 3vh;
     gap: 2vw;
   }
   .servises h4 {
@@ -474,5 +544,136 @@
   }
   .servises h6 {
     font-size: 3.8vw;
+  }
+
+  .accordion-header {
+    padding: 4vw 1vw;
+  }
+  .accordion-header::after {
+    margin-top: -1vh;
+  }
+  .otchetnost_list {
+    margin-top: 2vh;
+  }
+
+  .accordion-content {
+    padding: 0 2vw;
+  }
+  .accordion-content a {
+    font-size: 4vw;
+  }
+
+  .otchetnost .accordeon-text {
+    padding: 1.5vh 0;
+  }
+
+  .dogovor_list {
+    margin-top: 4vh !important;
+    width: 100%;
+  }
+
+  .info-doc .servises_list-2 {
+    width: 100%;
+    gap: 2vh;
+  }
+
+  .info-doc .servises_list-2 a img {
+    width: 10vw;
+  }
+
+  .rekviziti_list {
+    width: 100%;
+    font-size: 4.1vw;
+  }
+  .rekviziti_list li a {
+    font-size: 4.1vw;
+  }
+
+  .svidetelstva__list {
+    margin-top: 2vh;
+    grid-template-columns: 1fr;
+    gap: 6vh;
+  }
+  .svidetelstva__card h5 {
+    text-align: center;
+    width: 100%;
+    font-size: 4vw;
+  }
+
+  .accordion-content p {
+    font-size: 3.8vw;
+  }
+  .accordion-header {
+    font-size: 4vw;
+  }
+  .accordeon-content-num {
+    min-width: 25px;
+    height: 25px;
+    font-size: 4vw;
+  }
+
+  .servises_advantages {
+    grid-template-columns: 1fr;
+  }
+  .servises_advantages-title {
+    font-size: 5.5vw !important;
+  }
+  .servises_advantages-cart {
+    padding: 4vh 0;
+  }
+
+  .servises_list-1 .servises_check {
+    width: 10vw;
+  }
+  .servises_list-2 li {
+    font-size: 4vw;
+  }
+  .servises_list-2 li img {
+    width: 8vw;
+  }
+
+  .servises_green {
+    margin: 4vh 0;
+    grid-template-columns: 1fr;
+  }
+  .servises_green-cart p {
+    font-size: 4vw;
+  }
+  .servises_green-cart {
+    flex-direction: row;
+    min-height: 16vh;
+    width: 100%;
+    align-items: center;
+  }
+  .servises_green-cart img {
+    width: 20vw;
+  }
+
+  .servises_button-feedback {
+    margin-top: 4vh;
+  }
+
+  .feedback_form-content,
+  .popup_textarea {
+    width: 80%;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .popup_textarea {
+    display: block;
+  }
+  .popup-close {
+    top: 1vh;
+    right: 8vw;
+    font-size: 8vw;
+  }
+  .popup_form-label,
+  .popup_form-label a {
+    font-size: 3.5vw;
+    color: var(--text-color-light);
+  }
+  .popup_button-submit {
+    padding: 3vw;
   }
 }

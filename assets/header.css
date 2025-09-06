@@ -1,12 +1,11 @@
 /*=============== HEADER ===============*/
 header {
   background-color: var(--body-color-dark);
-  padding-top: 20px;
-  padding-bottom: 15px;
 }
 .header__section {
   margin-left: 60px;
   margin-right: 60px;
+  width: 100%;
 }
 
 .header__wrap {
@@ -101,25 +100,28 @@ header {
 /* Базовые стили для header */
 .site-header {
   position: fixed;
+  min-height: 14vh;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: padding 0.3s ease;
+  transition: min-height 0.3s ease;
+
+  display: flex;
+  align-items: center;
 }
 
 /* Состояние когда страница прокручена */
 .site-header.scrolled {
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  /* box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15); */
+  min-height: 10vh;
 }
 
 /*=============== MEDIA SCREEN ===============*/
 @media (max-width: 768px) {
-  header {
+  /* header {
     padding: 10px 0;
-  }
+  } */
   .header__section {
     margin-left: 20px;
     margin-right: 20px;
@@ -127,8 +129,11 @@ header {
   .header__logo {
     width: 25vw;
   }
+  .site-header {
+    min-height: 10vh;
+  }
   .site-header.scrolled {
-    padding: 3px 0;
+    min-height: 8vh;
   }
 
   .burger {
@@ -151,6 +156,10 @@ header {
     align-items: flex-start;
     gap: 24px;
     overflow: auto;
+  }
+  .scrolled .header__nav {
+    top: 69px;
+    height: calc(100vh - 69px);
   }
 
   .header__nav.active {
@@ -184,6 +193,32 @@ header {
   }
   .header__drop-wrap a {
     font-size: 5.5vw;
+  }
+
+  .header_contacts {
+    margin-top: 15px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    color: var(--text-color-light);
+    gap: 24px;
+  }
+
+  .header_contacts h6 {
+    font-size: 5.5vw;
+    margin-bottom: 10px;
+  }
+
+  .header_contacts a,
+  .header_contacts p {
+    font-size: 4.5vw;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .header_contacts img {
+    width: 6vw;
   }
 
   /* Burger animation */

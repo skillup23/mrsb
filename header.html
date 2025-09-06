@@ -70,7 +70,25 @@
         </button>
 
         <div class="header_contacts hidden-pc">
-          <h4>Контакты</h4>
+          <h6>КОНТАКТЫ</h6>
+          <a href="tel:84956020798"
+            ><img src="assets/files/phone-solid.svg" alt="Иконка" />+7 (495)
+            602-07-98</a
+          >
+          <a href="tel:84956020794"
+            ><img src="assets/files/phone-solid.svg" alt="Иконка" />+7 (495)
+            602-07-94</a
+          >
+          <p>
+            <img src="assets/files/clock-filled.svg" alt="Иконка" />Пн-пт с 9:00
+            до 18:00
+          </p>
+          <a href="mailto:info@mrsb.ru"
+            ><img
+              src="assets/files/mail-rounded.svg"
+              alt="Иконка"
+            />info@mrsb.ru</a
+          >
         </div>
       </nav>
 
@@ -91,103 +109,103 @@
   // +++++++++++ Раскрывающийся список в меню +++++++++
   // Слушатель по всему документу
   function initDropdown() {
-    const dropdowns = document.querySelectorAll('.header__drop-link');
-    const dropdownButtons = document.querySelectorAll('.header__nav-link-open');
-    const dropdownLinks = document.querySelectorAll('.header__drop-wrap a');
+    const dropdowns = document.querySelectorAll(".header__drop-link");
+    const dropdownButtons = document.querySelectorAll(".header__nav-link-open");
+    const dropdownLinks = document.querySelectorAll(".header__drop-wrap a");
 
     // Закрыть все выпадающие меню кроме текущего
     function closestAllDropMenu(exceptThis) {
       dropdowns.forEach((dropdown) => {
         if (dropdown !== exceptThis) {
           dropdown
-            .querySelector('.header__drop-menu')
-            .classList.remove('visible-block');
+            .querySelector(".header__drop-menu")
+            .classList.remove("visible-block");
 
           //Найти стрелку для переворота в родительском компоненте
-          const arrowParent = dropdown.closest('.header__drop-link');
+          const arrowParent = dropdown.closest(".header__drop-link");
           arrowParent
-            .querySelector('.header__nav-arroy')
-            .classList.remove('rotate180');
+            .querySelector(".header__nav-arroy")
+            .classList.remove("rotate180");
         }
       });
     }
 
     // Обработчик клика по кнопке меню
     dropdownButtons.forEach((toggle) => {
-      toggle.addEventListener('click', function (e) {
+      toggle.addEventListener("click", function (e) {
         e.stopPropagation();
         const parentDropdown = this.parentElement;
 
         closestAllDropMenu(parentDropdown);
 
         parentDropdown
-          .querySelector('.header__drop-menu')
-          .classList.toggle('visible-block');
+          .querySelector(".header__drop-menu")
+          .classList.toggle("visible-block");
 
         parentDropdown
-          .querySelector('.header__nav-arroy')
-          .classList.toggle('rotate180');
+          .querySelector(".header__nav-arroy")
+          .classList.toggle("rotate180");
       });
     });
 
     // Обработчик клика по ссылке в меню
     dropdownLinks.forEach((link) => {
-      link.addEventListener('click', function () {
+      link.addEventListener("click", function () {
         // this.closest(".header__drop-menu").classList.remove("visible-block");
         closestAllDropMenu(null);
       });
     });
 
     // Закрыть меню при клике вне его
-    document.addEventListener('click', function () {
+    document.addEventListener("click", function () {
       closestAllDropMenu(null);
     });
 
     // Предотвратить закрытие при клике внутри меню
-    document.querySelectorAll('.header__drop-menu').forEach((content) => {
-      content.addEventListener('click', function (e) {
+    document.querySelectorAll(".header__drop-menu").forEach((content) => {
+      content.addEventListener("click", function (e) {
         e.stopPropagation();
       });
     });
 
     // Бургер меню
-    const burger = document.getElementById('burger');
-    const nav = document.querySelector('.header__nav');
+    const burger = document.getElementById("burger");
+    const nav = document.querySelector(".header__nav");
     const body = document.body;
 
     // Открытие/закрытие меню
-    burger.addEventListener('click', function () {
-      burger.classList.toggle('active');
-      nav.classList.toggle('active');
-      body.classList.toggle('scroll-lock');
+    burger.addEventListener("click", function () {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+      body.classList.toggle("scroll-lock");
     });
 
     // Закрытие меню при клике на ссылку
-    const navLinks = document.querySelectorAll('.header__nav-link-mobile');
+    const navLinks = document.querySelectorAll(".header__nav-link-mobile");
     navLinks.forEach((link) => {
-      link.addEventListener('click', function () {
-        burger.classList.remove('active');
-        nav.classList.remove('active');
-        body.classList.remove('scroll-lock');
+      link.addEventListener("click", function () {
+        burger.classList.remove("active");
+        nav.classList.remove("active");
+        body.classList.remove("scroll-lock");
       });
     });
   }
 
   // Липкое меню
   function initStickyHeader() {
-    const StickyHeader = document.querySelector('.site-header');
+    const StickyHeader = document.querySelector(".site-header");
     if (!StickyHeader) return;
 
     let lastScroll = 0;
 
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       const currentScroll = window.pageYOffset;
 
       if (currentScroll > 100) {
-        StickyHeader.classList.add('scrolled');
+        StickyHeader.classList.add("scrolled");
       } else {
-        StickyHeader.classList.remove('scrolled');
-        StickyHeader.style.transform = 'translateY(0)';
+        StickyHeader.classList.remove("scrolled");
+        StickyHeader.style.transform = "translateY(0)";
       }
 
       lastScroll = currentScroll;

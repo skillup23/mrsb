@@ -830,6 +830,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .my-marker {
   width: 2vw;
 }
+.ymaps3x0--controls {
+  z-index: 800;
+}
 
 /*=============== MEDIA SCREEN ===============*/
 @media (max-width: 768px) {

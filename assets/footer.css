@@ -101,17 +101,19 @@
     width: 45%;
   }
   .footer_column h6 {
-    font-size: 3.5vw;
+    font-size: 4vw;
+    font-weight: 600;
     color: var(--first-color);
     margin-bottom: 0;
   }
   .footer_column a,
   .footer_column p {
-    font-size: var(--small-font-size);
+    font-size: var(--base-font-size);
     gap: 3vw;
   }
   .footer_column-last {
     margin-top: 8vw;
+    width: 70vw;
   }
   .footer_column a img {
     width: 5vw;

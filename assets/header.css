@@ -158,7 +158,7 @@ header {
     overflow: auto;
   }
   .scrolled .header__nav {
-    top: 69px;
+    top: 67px;
     height: calc(100vh - 69px);
   }
 

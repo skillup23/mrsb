@@ -73,12 +73,12 @@ async function main() {
   );
 
   // Координаты центра карты
-  const CENTER_COORDINATES = [37.438376, 55.634714];
+  const CENTER_COORDINATES = [37.435, 55.6365];
   // координаты метки на карте
-  const MARKER_COORDINATES = [37.438376, 55.634714];
+  const MARKER_COORDINATES = [37.4345, 55.6375];
 
   // Объект с параметрами центра и зумом карты
-  const LOCATION = { center: CENTER_COORDINATES, zoom: 17 };
+  const LOCATION = { center: CENTER_COORDINATES, zoom: 16 };
 
   // Создание объекта карты
   map = new YMap(document.getElementById('map'), { location: LOCATION });

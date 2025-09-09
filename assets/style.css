@@ -1087,8 +1087,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
     flex-direction: column-reverse;
   }
   input[type='checkbox' i] {
-    width: 44px;
-    height: 44px;
+    width: 35px;
+    height: 35px;
     /* border-radius: 20px; */
   }
   .feedback_form-checkbox {
@@ -1120,13 +1120,17 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   .information {
     margin-top: 2vw;
   }
+  .information_card {
+    border-radius: 6px;
+    padding: 3vw;
+  }
   .information_cards-all {
     margin-top: 4vw;
     grid-template-columns: 1fr 1fr;
     gap: 3vw;
   }
   .information_card h5 {
-    font-size: var(--base-font-size);
+    font-size: var(--small-font-size);
   }
   .information_card img {
     width: 8vw;
@@ -1229,4 +1233,72 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   /* .video_holder video {
     width: 115vw;
   } */
+}
+
+#cookie_notification {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  width: 60vw;
+  max-width: 90%;
+  transform: translateX(-50%);
+  padding: 15px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+#cookie_notification p {
+  margin: 0;
+  font-size: 0.9vw;
+  text-align: left;
+  color: var(--text-color); /* Изменено для лучшей читаемости */
+}
+
+#cookie_notification p a {
+  font-size: 0.9vw;
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+  #cookie_notification.show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cookie_accept {
+    margin: 0 0 0 25px;
+    border-radius: 6px;
+    display: flex;
+    padding: 10px 15px;
+    font-size: 1vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #cookie_notification {
+    width: 80vw;
+    padding: 15px;
+  }
+
+  #cookie_notification.show {
+    display: block;
+    text-align: left;
+  }
+
+  #cookie_notification p,
+  #cookie_notification p a {
+    font-size: 2.8vw;
+  }
+
+  .cookie_accept {
+    width: 100%;
+    margin: 10px auto 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 3.2vw;
+  }
 }

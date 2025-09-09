@@ -24,7 +24,7 @@
       rgba(0, 0, 0, 0) 58.8%,
       rgba(0, 0, 0, 0.8) 85.7%
     ),
-    url("files/servises/img-1.jpg");
+    url('files/servises/img-1.jpg');
 }
 
 .orem {
@@ -33,7 +33,7 @@
       rgba(0, 0, 0, 0) 58.8%,
       rgba(0, 0, 0, 0.8) 85.7%
     ),
-    url("files/servises/img-2.jpg");
+    url('files/servises/img-2.jpg');
 }
 
 .aees-kye {
@@ -42,7 +42,7 @@
       rgba(0, 0, 0, 0) 58.8%,
       rgba(0, 0, 0, 0.8) 85.7%
     ),
-    url("files/servises/img-3.jpg");
+    url('files/servises/img-3-1.jpg');
 }
 
 .buy-generation {
@@ -51,7 +51,7 @@
       rgba(0, 0, 0, 0) 58.8%,
       rgba(0, 0, 0, 0.8) 85.7%
     ),
-    url("files/servises/img-6.jpg");
+    url('files/servises/img-6.jpg');
 }
 
 .consalting {
@@ -60,7 +60,7 @@
       rgba(0, 0, 0, 0) 58.8%,
       rgba(0, 0, 0, 0.8) 85.7%
     ),
-    url("files/servises/img-4.jpg");
+    url('files/servises/img-4.jpg');
 }
 
 .tech-connect {
@@ -69,7 +69,7 @@
       rgba(0, 0, 0, 0) 58.8%,
       rgba(0, 0, 0, 0.8) 85.7%
     ),
-    url("files/servises/img-5.jpg");
+    url('files/servises/img-5.jpg');
 }
 
 .design-const {
@@ -78,7 +78,7 @@
       rgba(0, 0, 0, 0) 58.8%,
       rgba(0, 0, 0, 0.8) 85.7%
     ),
-    url("files/servises/img-7.jpg");
+    url('files/servises/img-7.jpg');
 }
 
 .green-energy {
@@ -87,7 +87,7 @@
       rgba(0, 0, 0, 0) 58.8%,
       rgba(0, 0, 0, 0.8) 85.7%
     ),
-    url("files/servises/img-8.jpg");
+    url('files/servises/img-8.jpg');
 }
 
 .servises a {
@@ -122,6 +122,7 @@
   text-transform: uppercase;
   font-size: var(--smaller-font-size);
   font-weight: 500;
+  color: var(--text-color-light);
 }
 
 .servises_img-main {
@@ -381,16 +382,16 @@
 }
 
 .accordion-header::after {
-  content: "+";
+  content: '+';
   margin-top: -2.3vh;
   float: right;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: var(--h3-font-size);
   font-weight: 400;
 }
 
 .accordion-header.active::after {
-  content: "–";
+  content: '–';
 }
 
 .accordeon-text {

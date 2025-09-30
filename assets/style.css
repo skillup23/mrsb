@@ -367,10 +367,14 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 /*=============== ABOUT ===============*/
 .about {
   display: flex;
+  padding-top: 4vw;
 }
 
 .about_column {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
 }
 
 .about_column-grid {
@@ -410,13 +414,15 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .about_card-big {
-  margin-top: 3vh;
+  /* margin-top: 3vh; */
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 24px;
   transition: all 0.3s ease;
 }
 .about_number-big {
-  font-size: 18vw;
+  font-size: 10vw;
   color: var(--first-color);
   font-weight: 800;
   text-align: center;
@@ -432,9 +438,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .about_column-box {
-  margin-top: 6vh;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-top: 6vh; */
+  /* margin-left: auto;
+  margin-right: auto; */
   width: 30vw;
   display: flex;
   justify-content: space-between;
@@ -513,6 +519,10 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 2.1vw;
+}
+
+.yslugi-section {
+  padding-top: 4vw;
 }
 
 .yslugi_1 {
@@ -935,12 +945,15 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   }
   .about_column {
     width: 100%;
+    flex-direction: column;
+    gap: 4vw;
   }
   .about_card-big {
     margin-top: 0;
+    justify-content: space-between;
   }
   .about_number-big {
-    font-size: 44vw;
+    font-size: 36vw;
     letter-spacing: -3vw;
   }
   .about_text-big {
@@ -948,15 +961,16 @@ dialog:-internal-dialog-in-top-layer::backdrop {
     margin-top: -5vw;
   }
   .about_column-box {
-    margin-top: 4vw;
+    /* margin-top: 4vw; */
     margin-bottom: 12vw;
-    width: 80%;
+    /* width: 80%; */
+    width: 100%;
   }
   .about_column-box-icon {
     width: 10vw;
   }
   .about_description {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
   }
   .about_number {
     font-size: 24vw;

@@ -136,7 +136,7 @@
 
 .servises_text p {
   margin-bottom: 4vh;
-  font-size: 1.25vw;
+  font-size: 1.35vw;
 }
 .servises_text p b {
   font-weight: 550;
@@ -234,7 +234,8 @@
   padding: 15px 24px;
   border-radius: 8px;
   font-size: var(--normal-font-size);
-  font-weight: 500;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .servises-dialog {
@@ -302,12 +303,13 @@
 
 .servises_advantages-title {
   margin-top: 8vh !important;
+  font-weight: 700 !important;
 }
 .servises_advantages {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .servises_advantages-cart {
-  padding: 8vh 0;
+  padding: 8vh 1vw;
   justify-content: center;
   align-items: center;
   background: linear-gradient(
@@ -319,6 +321,8 @@
 }
 .servises_advantages-cart p {
   text-align: center;
+  font-weight: 600;
+  font-size: 1.7vw;
 }
 
 .servises_green {
@@ -353,7 +357,7 @@
   border-bottom: 1px solid #353234;
   color: var(--first-color);
   font-size: var(--h5-font-size);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -621,6 +625,9 @@
   }
   .servises_advantages-cart {
     padding: 4vh 0;
+  }
+  .servises_advantages-cart p {
+    font-size: 20px;
   }
 
   .servises_list-1 .servises_check {
